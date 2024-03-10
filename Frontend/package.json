@@ -12,6 +12,7 @@
     "db2": "json-server -p 4001 --watch data/odds.json"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
     "react": "^18.2.0",

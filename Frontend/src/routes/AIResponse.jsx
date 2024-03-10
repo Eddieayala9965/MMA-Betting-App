@@ -9,6 +9,8 @@ const AIResponse = () => {
     setInputText(e.target.value);
   };
 
+  const key = import.meta.env.VITE_OPEN_API_AIKEY;
+
   const fetchData = async () => {
     try {
       const fighterResponse = await fetch("http://localhost:4000/fighters");
@@ -29,7 +31,7 @@ const AIResponse = () => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer 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`,
+            Authorization: `Bearer ${key}`,
           },
           body: JSON.stringify({
             model: "gpt-3.5-turbo",
