@@ -1,0 +1,72 @@
+{
+  "fighters": [
+    {
+      "FighterId": 1,
+      "FirstName": "Marlon",
+      "LastName": "Vera",
+      "Nickname": "Chito",
+      "WeightClass": "Scrambled",
+      "BirthDate": "1992-12-02T00:00:00",
+      "Height": 105.0,
+      "Weight": 210.0,
+      "Reach": 108.9,
+      "Wins": 32,
+      "Losses": 12,
+      "Draws": 2,
+      "NoContests": 0,
+      "TechnicalKnockouts": 12,
+      "TechnicalKnockoutLosses": 0,
+      "Submissions": 12,
+      "SubmissionLosses": 0,
+      "TitleWins": 0,
+      "TitleLosses": 0,
+      "TitleDraws": 2,
+      "CareerStats": {
+        "FighterId": 1,
+        "FirstName": "Marlon",
+        "LastName": "Vera",
+        "SigStrikesLandedPerMinute": 10.4,
+        "SigStrikeAccuracy": 78.0,
+        "TakedownAverage": 1.4,
+        "SubmissionAverage": 2.3,
+        "KnockoutPercentage": 36.0,
+        "TechnicalKnockoutPercentage": 36.0,
+        "DecisionPercentage": 20.6
+      }
+    },
+    {
+      "FighterId": 2,
+      "FirstName": "Sean",
+      "LastName": "O'Malley",
+      "Nickname": "Suga",
+      "WeightClass": "Scrambled",
+      "BirthDate": "1994-10-24T00:00:00",
+      "Height": 109.6,
+      "Weight": 208.4,
+      "Reach": 111.2,
+      "Wins": 26,
+      "Losses": 2,
+      "Draws": 0,
+      "NoContests": 2,
+      "TechnicalKnockouts": 19,
+      "TechnicalKnockoutLosses": 2,
+      "Submissions": 2,
+      "SubmissionLosses": 0,
+      "TitleWins": 2,
+      "TitleLosses": 0,
+      "TitleDraws": 2,
+      "CareerStats": {
+        "FighterId": 2,
+        "FirstName": "Sean",
+        "LastName": "O'Malley",
+        "SigStrikesLandedPerMinute": 11.2,
+        "SigStrikeAccuracy": 94.4,
+        "TakedownAverage": 1.0,
+        "SubmissionAverage": 1.0,
+        "KnockoutPercentage": 56.9,
+        "TechnicalKnockoutPercentage": 56.9,
+        "DecisionPercentage": 24.4
+      }
+    }
+  ]
+}
