@@ -4,6 +4,7 @@ import AIResponse from "./routes/AIResponse";
 import ErrorPage from "./pages/ErrorPage";
 import Home from "./routes/Home";
 import Register, { action as registerAction } from "./routes/Resgister";
+import Login, { action as loginAction } from "./routes/Login";
 
 import "./App.css";
 
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register />,
         action: registerAction,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+        action: loginAction,
       },
     ],
   },

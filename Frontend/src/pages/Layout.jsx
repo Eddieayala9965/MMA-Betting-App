@@ -5,6 +5,7 @@ const Layout = () => {
     { title: "Home", url: "/" },
     { title: "Ask Your Prediction", url: "/ai" },
     { title: "Register", url: "/register" },
+    { title: "Login", url: "/login" },
   ];
   return (
     <>
