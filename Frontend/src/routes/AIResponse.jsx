@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 // you need to use react roiter dom to import useloaderdata
 
 const AIResponse = () => {
