@@ -9,7 +9,7 @@ const Layout = () => {
   ];
   return (
     <>
-      <div className="flex justify-center text-center items-center ">
+      <div className="flex justify-center text-center items-center bg-color-dark-grey text-white">
         <Nav navItems={primaryNav} />
       </div>
       <Outlet />

@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-color: #212121;
+}
+.sidemenu {
+  width: 260px;
+}
+.bg-color-dark-grey {
+  background-color: #212121;
+}
+.bg-color-greyblack {
+  background-color: #171717;
+}
+.bg-color-chatbox-dark-grey {
+  background-color: #2f3136;
+}
+.shadow-custom {
+  box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.2);
+}
+.w-90 {
+  width: 95%;
+}

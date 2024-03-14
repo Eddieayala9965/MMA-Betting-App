@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ChatUi from "../components/ChatUi";
 // you need to use react roiter dom to import useloaderdata
 
 const AIResponse = () => {
@@ -54,26 +55,9 @@ const AIResponse = () => {
   };
 
   return (
-    <div>
-      <div>
-        <p>Lets see who going to win ufc 299</p>
-        <div>
-          <div>
-            <input
-              type="text"
-              className="form__input searchbars"
-              value={inputText}
-              onChange={handleInputChange}
-              placeholder="fighter."
-              required=""
-            />
-          </div>
-
-          <button onClick={fetchData}>Press</button>
-          <div>{result}</div>
-        </div>
-      </div>
-    </div>
+    <>
+      <ChatUi />
+    </>
   );
 };
 
