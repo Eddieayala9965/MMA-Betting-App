@@ -11,7 +11,9 @@ const ChatUi = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setChatLog([...chatlog, { user: "me", mesasge: `${input}` }]);
+
+    const newChatLog = [...chatlog, { user: "me", message: input }];
+    setChatLog(newChatLog);
     setInput("");
 
     const fastApi = `${import.meta.env.VITE_FASTAPI_URL}/generate`;
@@ -20,12 +22,11 @@ const ChatUi = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        mesasge: chatlog.map((message) => message.message).join(""),
-      }),
+      body: JSON.stringify(input),
     });
     const data = await response.json();
-    console.log(data);
+
+    setChatLog([...newChatLog, { user: "gpt", message: data.data }]);
   };
 
   const handleChange = (e) => {

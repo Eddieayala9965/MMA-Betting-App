@@ -3,7 +3,7 @@ const ChatMessage = ({ message }) => {
     <div className={`p-4 ${message.user === "gpt" && "chatgpt"}`}>
       <div className="flex ml-10">
         <div
-          className={` bg-green-400 rounded-full w-10 h-10 ${
+          className={` bg-green-500 rounded-full w-10 h-10 ${
             message.user === "gpt" && "chatgpt"
           }`}
         ></div>
