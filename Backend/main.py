@@ -9,7 +9,6 @@ import jwt
 
 import os
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 
 # can you create a get user function
 
@@ -32,6 +31,25 @@ origins = [
 
 supabase = create_supabase_client()
 
+
+
+# oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
+
+
+# def get_current_user(token: str = Depends(oauth2_scheme)): 
+#     supabase_user = supabase.auth.get_user(token)
+#     if supabase_user is None:
+#         raise HTTPException(status_code=401, detail="Invalid token")
+#     return User(email=supabase_user['email'], password="")
+
+# @app.get('/getUser', status_code=200)
+# async def get_user_id(current_user: User = Depends(get_current_user)):
+#     return {"email": current_user.email, "id": current_user.id}
+
+@app.get('/get_user')
+def get_user():
+    user = supabase.auth.get_user()
+    return user
 
 
 @app.get('/')
@@ -66,14 +84,3 @@ def logout_user():
     return res
 
 
-
-def get_current_user(token: str = Depends(oauth2_scheme)):
-    user = supabase.auth.get_user()
-    return user
-
-
-@app.get('/user')
-def get_current_active_user(current_user: User = Depends(get_current_user)):
-    if not current_user:
-        raise HTTPException(status_code=401, detail="Unauthorized")
-    return current_user
