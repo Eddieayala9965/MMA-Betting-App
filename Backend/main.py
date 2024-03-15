@@ -1,10 +1,15 @@
-from fastapi import FastAPI ,HTTPException, status, Depends
+from fastapi import FastAPI ,HTTPException, status, Depends, Body
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
+from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from supabase import Client, create_client
 from db.supabase import create_supabase_client
 from typing import List, Dict
 from models import Fighter, User
+from openai import OpenAI
+from dotenv import load_dotenv
+import os
+
 
 app = FastAPI()
 
@@ -21,6 +26,41 @@ origins = [
 ]
 
 supabase = create_supabase_client()
+
+
+
+client = OpenAI(
+  organization='org-qt4oJEpC6WIFhU0iZk7QwEnC',
+  api_key=os.getenv("OPEN_API_AIKEY")
+)
+
+
+
+
+@app.post("/generate")
+async def root(message: str = Body(...)):
+    try:
+        response = client.completions.create(
+            model="gpt-3.5-turbo-instruct-0914",
+            prompt=message,
+            max_tokens=7,
+            temperature=0
+        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+    return JSONResponse(content={"data": response.choices[0].text.strip()})
+
+
+
+
+
+
+
+
+
+
+
 
 @app.get('/')
 def test():
