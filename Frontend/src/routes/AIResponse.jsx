@@ -56,7 +56,6 @@ const AIResponse = () => {
   return (
     <div>
       <div>
-        <p>Lets see who going to win ufc 299</p>
         <div>
           <div>
             <input
