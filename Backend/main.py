@@ -10,6 +10,7 @@ from openai import OpenAI
 from dotenv import load_dotenv
 import os
 
+oauth2 = OAuth2PasswordBearer(tokenUrl="/login")
 
 app = FastAPI()
 
@@ -41,25 +42,15 @@ client = OpenAI(
 async def root(message: str = Body(...)):
     try:
         response = client.completions.create(
-            model="gpt-3.5-turbo-instruct-0914",
-            prompt=message,
-            max_tokens=7,
+            model="gpt-3.5-turbo-instruct",
+            prompt=f'Answer the following question: {message}',
+            max_tokens=100,
             temperature=0
         )
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
     return JSONResponse(content={"data": response.choices[0].text.strip()})
-
-
-
-
-
-
-
-
-
-
 
 
 @app.get('/')
@@ -92,37 +83,3 @@ def logout_user():
     return res
 
 
-
-
-@app.get("/get_user")
-async def get_current_user():
-    user = await supabase.auth.get_user("access_token")
-    if not user:
-        raise HTTPException(status_code=401, detail="Invalid authentication credentials")
-    return User( username=user['username'], email=user['email'])
-
-
-@app.post("/fighters")
-async def create_fighter(weight_class: str, record: str, name: str ,current_user: str = Depends(get_current_user)):
-    fighter_data = {"id": current_user, "weight_class": weight_class, "record": record, "name": name}
-    fighter = await supabase.table("Fighter").insert(fighter_data)
-    return fighter
-
-# @app.get("/fighters/{fighter_id}")
-# async def read_fighter(fighter_id: int, current_user: str = Depends(get_current_user)):
-#     fighter = await supabase.table("fighters").select("*").eq("user_id", current_user).eq("fighter_id", fighter_id).single()
-#     if not fighter:
-#         raise HTTPException(status_code=404, detail="Fighter not found")
-#     return fighter
-
-# @app.put("/fighters/{fighter_id}")
-# async def update_fighter(fighter_id: int, current_user: str = Depends(get_current_user)):
-#     fighter_data = {"user_id": current_user, "fighter_id": fighter_id}
-#     updated_fighter = await supabase.table("fighters").update(fighter_data).eq("fighter_id", fighter_id)
-#     return updated_fighter
-
-
-# @app.delete("/fighters/{fighter_id}")
-# async def delete_fighter(fighter_id: int, current_user: str = Depends(get_current_user)):
-#     deleted_fighter = await supabase.table("fighters").delete().eq("fighter_id", fighter_id)
-#     return {"message": "Fighter deleted", "fighter_id": fighter_id}
