@@ -1,4 +1,4 @@
-import { Form } from "react-router-dom";
+import { Form, redirect } from "react-router-dom";
 
 export const action = async ({ request }) => {
   const formData = await request.formData();
@@ -18,11 +18,19 @@ export const action = async ({ request }) => {
     const response = await fetch(url, options);
     data = await response.json();
     console.log(data);
-    return { data };
+    if (response.ok) {
+      window.alert("Registerd Succesful");
+      return true;
+    } else {
+      window.alert("Registration Failed");
+      return false;
+    }
   };
-  const result = await addUser(loginData);
-  return result;
+
+  const register = await addUser(loginData);
+  return register ? redirect("/") : redirect("/register");
 };
+
 const Register = () => {
   return (
     <Form method="POST">

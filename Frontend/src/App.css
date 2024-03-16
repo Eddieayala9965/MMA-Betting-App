@@ -2,17 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #212121;
-}
 .sidemenu {
   width: 260px;
 }
-.bg-color-dark-grey {
-  background-color: #212121;
-}
+
 .bg-color-greyblack {
-  background-color: #171717;
+  background-color: #f9f9f9;
 }
 .bg-color-chatbox-dark-grey {
   background-color: #2f3136;
