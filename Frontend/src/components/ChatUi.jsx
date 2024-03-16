@@ -8,6 +8,9 @@ const ChatUi = () => {
       message: "how can i help you ?",
     },
   ]);
+  const [chats, setChats] = useState([]);
+
+  const addChat = () => {};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -32,16 +35,23 @@ const ChatUi = () => {
   const handleChange = (e) => {
     setInput(e.target.value);
   };
+
+  const clearChat = () => {
+    setChatLog([]);
+  };
+
   return (
     <div className="flex max-w-full ml-0 mr-0 pl-0 pr-0 text-white text-center bg-color-dark-grey h-screen">
       <aside className="sidemenu bg-color-greyblack">
-        <div className=" p-4 border rounded-md hover:bg-opacity-50 transition duration-300 ease-in-out hover:bg-white border-white text-left ">
-          <span className="pl-2 pr-2 ">&#43;</span>
-          New Chat
-        </div>
+        <button onClick={clearChat}>
+          <div className=" p-4 border rounded-md hover:bg-opacity-50 transition duration-300 ease-in-out hover:bg-white border-white text-left ">
+            <span className="pl-2 pr-2 ">&#43;</span>
+            New Chat
+          </div>
+        </button>
       </aside>
       <section className="flex-1 relative">
-        <div className="chat-log p-4 h-screen text-left">
+        <div className="chat-log p-4 h-screen text-left overflow-auto">
           {chatlog.map((message, index) => {
             return <ChatMessage key={index} message={message} />;
           })}
@@ -53,7 +63,7 @@ const ChatUi = () => {
             </div>
           </div>
         </div>
-        <div className="p-3 absolute top-auto bottom-0 left-0 right-0">
+        <div className="p-3 absolute  bottom-0 left-0 right-0">
           <form onSubmit={handleSubmit}>
             <input
               className="bg-slate-800 border-none border w-90 border-transparent rounded-lg outline-none p-3 text-color-white text-lg"
