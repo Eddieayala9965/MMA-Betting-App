@@ -9,7 +9,11 @@ from models import User
 from openai import OpenAI
 from dotenv import load_dotenv
 from typing import Annotated
+from pydantic import BaseModel
+from uuid import uuid4
+import requests
 import os
+import json
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 
@@ -37,12 +41,44 @@ client = OpenAI(
 )
 
 
+
+async def get_fighter_data():
+    try:
+        response = requests.get('http://localhost:4000/fighters')
+
+        if response.status_code == 200:
+            data = response.json()
+            return data
+        else:
+            raise HTTPException(status_code=response.status_code, detail="Failed to fetch data")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    
+
+async def get_odds_data(url):
+    try:
+        response = requests.get(url)
+
+        if response.status_code == 200:
+            data = response.json()
+            stringified_data = json.dumps(data)
+            return stringified_data
+        else:
+            raise HTTPException(status_code=response.status_code, detail="Failed to fetch data")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+
+
 @app.post("/generate")
 async def generate_response(message: str = Body(...)):
+    
     try:
+        odds_data = await get_odds_data('http://localhost:4001/odds')
         response = client.completions.create(
             model="gpt-3.5-turbo-instruct",
-            prompt=f'Answer the following question: {message}',
+            prompt=f'Respond to questions about UFC and MMA fighters. Limit responses to provided data. For missing stats or odds, mention you dont have the information. Ensure matchups are between female fighters. Avoid matchups with fighters from different weight classes. For predictions, focus on MMA-related questions. Be descriptive when providing odds or fighter stats. {message} {odds_data}', 
             max_tokens=100,
             temperature=0
         )
@@ -58,10 +94,43 @@ async def generate_response(message: str = Body(...)):
 
 
 
-# may need session id to be able to hold those logs
-# do a trigger for the conersation id
-# post request for conversation include id
-# pull data from backend to render on front end as component
+
+
+
+
+
+
+
+
+
+@app.post("/create_conversation_and_message/")
+async def create_conversation_and_message(request: Request):
+        # Retrieve Supabase session
+        session = supabase.auth.get_session()
+
+        # Generate UUIDs for conversation_id and message_id
+        conversation_id = str(uuid4())
+        message_id = str(uuid4())
+        
+        # Insert records into conversation and message tables
+        conversation_response = supabase.table("conversation").insert({"conversation_id": conversation_id}).execute()
+       
+        
+        return JSONResponse(content={"conversation_id": conversation_id})
+
+
+
+
+
+
+class Conversation(BaseModel):
+    conversation_id: int
+
+class Message(BaseModel):
+    conversation_id: int
+    
+
+
 
 
 
