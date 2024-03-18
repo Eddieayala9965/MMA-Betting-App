@@ -34,7 +34,7 @@ const Logout = () => {
   };
 
   return (
-    <div>
+    <div className="">
       {isLoading ? (
         <p>Logging out...</p>
       ) : (

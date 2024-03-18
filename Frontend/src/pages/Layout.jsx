@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Nav from "../components/Nav";
-import LogOutButton from "../components/LogOutButton";
+
 const Layout = () => {
   const primaryNav = [
     { title: "Home", url: "/" },
@@ -10,10 +10,10 @@ const Layout = () => {
   ];
   return (
     <>
-      <div className="flex justify-center text-center items-center ">
-        <Nav navItems={primaryNav} />
+      <div className="flex justify-center text-center items-center gap-14">
+        <Nav navItems={primaryNav}></Nav>
       </div>
-      <LogOutButton />
+
       <Outlet />
     </>
   );

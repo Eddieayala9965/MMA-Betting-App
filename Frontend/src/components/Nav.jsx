@@ -1,17 +1,29 @@
 import { PropTypes } from "prop-types";
 import { Link } from "react-router-dom";
+import Logout from "./Logout";
 
-const Nav = ({ navItems }) => {
+const Nav = ({ navItems, logOut }) => {
   return (
-    <nav>
-      <ul className="flex  gap-16">
-        {navItems.map((link, index) => {
-          return (
-            <li key={`${link.title}-${index}`}>
-              <Link to={link.url}>{link.title}</Link>
-            </li>
-          );
-        })}
+    <nav className="bg-gray-800 text-white p-2 rounded-xl">
+      <ul className="flex gap-4 justify-center">
+        {navItems.map((link, index) => (
+          <li key={`${link.title}-${index}`} className="list-none">
+            <Link
+              to={link.url}
+              className="inline-block px-4 py-2 text-lg hover:bg-gray-700 active:bg-blue-500 rounded transition-colors duration-200"
+            >
+              {link.title}
+            </Link>
+          </li>
+        ))}
+        <li>
+          <button
+            onClick={logOut}
+            className="inline-block px-4 py-2 text-lg hover:bg-gray-700 active:bg-blue-500 rounded transition-colors duration-200"
+          >
+            Logout
+          </button>
+        </li>
       </ul>
     </nav>
   );

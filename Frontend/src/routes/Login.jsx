@@ -34,17 +34,35 @@ export const action = async ({ request }) => {
 };
 const Login = () => {
   return (
-    <Form method="POST">
-      <label>
-        Username
-        <input type="text" name="email" />
-      </label>
-      <label>
-        Password
-        <input type="text" name="password" />
-      </label>
-      <button type="submit">Login</button>
-    </Form>
+    <div className="flex flex-col justify-center align-center bg-white shadow-lg rounded-lg p-8 max-w-md mx-auto">
+      <h1 className="text-4xl font-bold mb-4 text-center">
+        Welcome to GPTFightChat!
+      </h1>
+      <Form method="POST" className="w-full">
+        <label className="block mb-4">
+          <span className="text-gray-700">Username</span>
+          <input
+            type="text"
+            name="email"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-md"
+          />
+        </label>
+        <label className="block mb-4">
+          <span className="text-gray-700">Password</span>
+          <input
+            type="text"
+            name="password"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-md"
+          />
+        </label>
+        <button
+          type="submit"
+          className="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+        >
+          Login
+        </button>
+      </Form>
+    </div>
   );
 };
 export default Login;

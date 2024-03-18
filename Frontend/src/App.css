@@ -18,3 +18,9 @@
 .w-90 {
   width: 95%;
 }
+.background-img {
+  background-image: url("./img/robot.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 13%;
+}
