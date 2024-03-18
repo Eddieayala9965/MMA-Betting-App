@@ -5,7 +5,8 @@ export const action = async ({ request }) => {
   const formData = await request.formData();
   const email = formData.get("email");
   const password = formData.get("password");
-  const data = { email, password };
+  const name = formData.get("name");
+  const data = { email, password, name };
   const url = `${import.meta.env.VITE_FASTAPI_URL}/login`;
 
   const userLogin = async (data) => {
@@ -30,7 +31,7 @@ export const action = async ({ request }) => {
   };
 
   const loginSuccesful = await userLogin(data);
-  return loginSuccesful ? redirect("/") : redirect("/user/login");
+  return loginSuccesful ? redirect("/") : redirect("/login");
 };
 const Login = () => {
   return (
@@ -40,10 +41,18 @@ const Login = () => {
       </h1>
       <Form method="POST" className="w-full">
         <label className="block mb-4">
-          <span className="text-gray-700">Username</span>
+          <span className="text-gray-700">Email</span>
           <input
             type="text"
             name="email"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-md"
+          />
+        </label>
+        <label className="block mb-4">
+          <span className="text-gray-700">Name</span>
+          <input
+            type="text"
+            name="name"
             className="mt-1 block w-full rounded-md border-gray-300 shadow-md"
           />
         </label>

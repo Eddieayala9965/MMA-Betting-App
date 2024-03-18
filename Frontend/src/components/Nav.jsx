@@ -17,12 +17,7 @@ const Nav = ({ navItems, logOut }) => {
           </li>
         ))}
         <li>
-          <button
-            onClick={logOut}
-            className="inline-block px-4 py-2 text-lg hover:bg-gray-700 active:bg-blue-500 rounded transition-colors duration-200"
-          >
-            Logout
-          </button>
+          <Logout />
         </li>
       </ul>
     </nav>

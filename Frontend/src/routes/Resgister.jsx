@@ -4,7 +4,8 @@ export const action = async ({ request }) => {
   const formData = await request.formData();
   const email = formData.get("email");
   const password = formData.get("password");
-  const loginData = { email, password };
+  const name = formData.get("name");
+  const loginData = { email, password, name };
   const url = `${import.meta.env.VITE_FASTAPI_URL}/register`;
 
   const addUser = async (data) => {
@@ -59,10 +60,20 @@ const Register = () => {
               />
             </label>
             <label>
+              <span className="text-grey-700">Name</span>
+              <input
+                className="mt-1 block w-[500px] h-8 rounded-md border-gray-800 shadow-md"
+                type="text"
+                placeholder="name"
+                name="name"
+              />
+            </label>
+            <label>
               <span className="text-grey-700">Password</span>
               <input
                 className="mt-1 w-[500px] block h-8 rounded-md border-gray-800 shadow-md"
                 type="text"
+                placeholder="password"
                 name="password"
               />
             </label>

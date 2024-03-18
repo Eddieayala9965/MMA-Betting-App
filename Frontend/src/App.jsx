@@ -5,6 +5,7 @@ import ErrorPage from "./pages/ErrorPage";
 import Home from "./routes/Home";
 import Register, { action as registerAction } from "./routes/Resgister";
 import Login, { action as loginAction } from "./routes/Login";
+import UserPage, { loader as userLoader } from "./routes/UserPage";
 
 import "./App.css";
 import "./normal.css";
@@ -31,6 +32,11 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login />,
         action: loginAction,
+      },
+      {
+        path: "/user",
+        element: <UserPage />,
+        loader: userLoader,
       },
     ],
   },

@@ -7,6 +7,7 @@ const Layout = () => {
     { title: "Ask Your Prediction", url: "/ai" },
     { title: "Register", url: "/register" },
     { title: "Login", url: "/login" },
+    { title: "User", url: "/user" },
   ];
   return (
     <>
