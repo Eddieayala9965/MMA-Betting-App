@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import UploadImg from "../components/UploadImg";
+import UpdateProfileForm from "../components/UpdateProfileForm";
 
 export const loader = async () => {
   const url = "http://127.0.0.1:8000/user";
@@ -29,7 +29,7 @@ const UserPage = () => {
           </div>
         );
       })}
-      <UploadImg userId={user.data} />
+      <UpdateProfileForm />
     </div>
   );
 };
