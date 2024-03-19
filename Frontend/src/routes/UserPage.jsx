@@ -7,6 +7,7 @@ export const loader = async () => {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
+      Authorization: `Bearer ${localStorage.getItem("access_token")}`,
     },
   };
   const response = await fetch(url, options);

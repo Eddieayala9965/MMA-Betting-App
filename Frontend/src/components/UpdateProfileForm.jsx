@@ -11,13 +11,16 @@ const UpdateProfileForm = () => {
 
     const requestOptions = {
       method: "PUT",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("access_token")}`,
+      },
       body: JSON.stringify({ email, name, bio }),
     };
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/update/profile",
+        `http://127.0.0.1:8000/update/profile/51212cdf-ea40-4273-a71c-28b8241340c8)}`,
         requestOptions
       );
       if (!response.ok) {

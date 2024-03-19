@@ -19,8 +19,13 @@ export const action = async ({ request }) => {
     };
     const response = await fetch(url, options);
     data = await response.json();
+    const { session, user } = data;
     console.log(data);
-
+    localStorage.clear();
+    localStorage.setItem("user_id", user.id);
+    localStorage.setItem("access_token", session.access_token);
+    localStorage.setItem("refresh_token", session.refresh_token);
+    localStorage.setItem("expires_at", session.expires_at);
     if (response.ok) {
       window.alert("Login Succesful");
       return true;
