@@ -11,5 +11,10 @@ class User(BaseModel):
     name: str
     password: str
 
+class UpdateUser(BaseModel):
+    email: str
+    name: str
+    bio: str
+
 class Message(BaseModel):
     pass

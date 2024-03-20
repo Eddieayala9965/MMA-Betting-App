@@ -5,7 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from supabase import Client, create_client
 from db.supabase import create_supabase_client
 from typing import List, Dict, Optional
-from models import User
+from models import User, UpdateUser
 from openai import OpenAI
 from dotenv import load_dotenv
 from typing import Annotated
@@ -50,16 +50,24 @@ client = OpenAI(
 )
 
 
-@app.put("/update/profile")
-async def update_profile(email: str, name: str, bio: str ):
-    print(email, name, bio)
+@app.put("/update/profile/{id}")
+async def update_profile(update: UpdateUser, id: str):
     try:
-        response = supabase.table('profile').update(
-            {'email': email, 'name': name, 'bio': bio}
-            ).eq("id", "51212cdf-ea40-4273-a71c-28b8241340c8").execute() 
+        
+        profile = supabase.table('profile').select('email', 'name', 'bio').eq('id', id).execute()
+        if not profile: 
+            raise HTTPException(status_code=404, detail="Profile not found")
+
+        response = supabase.table('profile').update({
+            'email': update.email,
+            'name': update.name,
+            'bio': update.bio
+        }).eq('id', id).execute()
+
         return response
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
 
 
 @app.get("/user")
@@ -73,7 +81,6 @@ async def get_profile():
 async def get_fighter_data(url):
     try:
         response = requests.get(url)
-
         if response.status_code == 200:
             data = response.json()
             return data
@@ -99,22 +106,27 @@ async def get_odds_data(url):
 
 
 
+@app.post("/reset_conversation_id")
+def reset_conversation_id():
+    global conversation_id
+    conversation_id = None
+    return {"message": "Conversation ID reset successfully."}
+
+
+
+
 @app.post("/generate")
 async def generate_response(message: str = Body(...)):
+
     
     try:
-        # odds_data = await get_odds_data('http://localhost:4001/odds')
-        # string_odds = json.dumps(odds_data)
-        # odds_data = json.loads(string_odds)
-        # fighter_data = await get_fighter_data('http://localhost:4000/fighters')
-        # string_fighter = json.dumps(fighter_data)
-        # fighter_data = json.loads(string_fighter)
+        data = await get_fighter_data("http://localhost:4001/fighters")
         response = client.chat.completions.create(
             model="gpt-4", 
             messages=[
                 {
                     "role": "system",
-                    "content": f'answer any type of questions:'
+                    "content": f'answer any type of questions pertaining to MMA and give any relevant data you have about ufc and thier fighter roster and thier statistics give hypothetical answers to hypotehtical fights or matchmaking, if the user asks `who will win, fighterA or fighterB`: {data}'
                 }, 
                 {
                     "role": "user",
@@ -125,9 +137,10 @@ async def generate_response(message: str = Body(...)):
             temperature=0
         )
 
-
         supabase.table('message').insert([
-            {'message_content': message, 'response_content': response.choices[0].message.content}
+            {
+            'message_content': message, 
+            'response_content': response.choices[0].message.content}
         ]).execute()
 
     except Exception as e:
@@ -144,6 +157,23 @@ def test():
 
 
 
+@app.get("/data")
+async def get_message_data():
+    try:
+        response = supabase.from_('message').select('message_content', 'response_content').execute()
+        return response
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.delete("/delete/{id}")
+async def delete_message(id: str):
+    try:
+        response = supabase.table('message').delete().eq('id', id).execute()
+        return response
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 
 @app.post("/register")
 def register_user(request: User):
@@ -153,6 +183,7 @@ def register_user(request: User):
     response = supabase.auth.sign_up({
         "email": email, 
         "password": password,
+        "name": name
     })
     return response
 
@@ -184,8 +215,6 @@ def logout_user():
 
 
 
-
-
 @app.post("/refresh")
 async def refresh_token(request: Request):
     data = await request.json()
@@ -198,6 +227,7 @@ async def refresh_token(request: Request):
             detail="Invalid session",
         )
     return session
+
 
 @app.get("/protected")
 async def protected_route(user: User = Depends(get_current_user)):
