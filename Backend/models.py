@@ -8,7 +8,6 @@ Base = declarative_base()
 
 class User(BaseModel):
     email: str
-    name: str
     password: str
 
 class UpdateUser(BaseModel):

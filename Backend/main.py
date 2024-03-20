@@ -120,13 +120,13 @@ async def generate_response(message: str = Body(...)):
 
     
     try:
-        data = await get_fighter_data("http://localhost:4001/fighters")
+        # data = await get_fighter_data("http://localhost:4001/fighters")
         response = client.chat.completions.create(
             model="gpt-4", 
             messages=[
                 {
                     "role": "system",
-                    "content": f'answer any type of questions pertaining to MMA and give any relevant data you have about ufc and thier fighter roster and thier statistics give hypothetical answers to hypotehtical fights or matchmaking, if the user asks `who will win, fighterA or fighterB`: {data}'
+                    "content": f'answer any type of questions pertaining to MMA and give any relevant data you have about ufc and thier fighter roster and thier statistics give hypothetical answers to hypotehtical fights or matchmaking, if the user asks `who will win, fighterA or fighterB`: '
                 }, 
                 {
                     "role": "user",
@@ -160,30 +160,30 @@ def test():
 @app.get("/data")
 async def get_message_data():
     try:
-        response = supabase.from_('message').select('message_content', 'response_content').execute()
+        response = supabase.from_('message').select('message_content', 'response_content', "message_id").execute()
         return response
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+from fastapi import HTTPException
+
 
 
 @app.delete("/delete/{id}")
 async def delete_message(id: str):
-    try:
-        response = supabase.table('message').delete().eq('id', id).execute()
+        response = supabase.table('message').delete().eq('message_id', id).execute()
         return response
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+
 
 
 @app.post("/register")
 def register_user(request: User):
     email = request.email
-    name = request.name
     password = request.password
     response = supabase.auth.sign_up({
         "email": email, 
         "password": password,
-        "name": name
     })
     return response
 
@@ -194,15 +194,9 @@ def register_user(request: User):
 def login_user(request: User):
     email = request.email
     password = request.password
-    name = request.name
     data = supabase.auth.sign_in_with_password({
         "email": email, 
         "password": password, 
-        "options": {
-            "data": {
-                "name": name
-            }
-        }
 
     })
     return data
