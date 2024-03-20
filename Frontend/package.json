@@ -9,7 +9,8 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "db": "json-server -p 4000 --watch data/fighters.json",
-    "db2": "json-server -p 4001 --watch data/odds.json"
+    "db2": "json-server -p 4001 --watch data/odds.json",
+    "db3": "json-server -p 4001 --watch data/small-data.json"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.7",
@@ -22,7 +23,8 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
     "sort-by": "^1.2.0",
-    "supabase": "^1.148.6"
+    "supabase": "^1.150.0",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.56",

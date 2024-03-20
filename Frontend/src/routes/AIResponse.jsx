@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ChatMessage from "../components/ChatMessage";
-import NewChat from "../components/NewChat";
+
 const AIResponse = () => {
   const [input, setInput] = useState("");
   const [chatlog, setChatLog] = useState([
@@ -43,7 +43,12 @@ const AIResponse = () => {
   return (
     <div className="flex max-w-full ml-0 mr-0 pl-0 pr-0 text-black text-center bg-color-dark-grey h-screen">
       <aside className="sidemenu bg-color-greyblack">
-        <NewChat clearChat={clearChat} />
+        <button onClick={clearChat}>
+          <div className=" p-4 border rounded-md hover:bg-opacity-50 transition duration-300 ease-in-out hover:bg-white border-black text-left ">
+            <span className="pl-2 pr-2 ">&#43;</span>
+            New Chat
+          </div>
+        </button>
       </aside>
       <section className="flex-1 relative">
         <div className="chat-log p-4 h-screen text-left overflow-auto">

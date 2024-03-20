@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import UpdateProfileForm from "../components/UpdateProfileForm";
+import ChatLog from "../components/ChatLog";
 
 export const loader = async () => {
   const url = "http://127.0.0.1:8000/user";
@@ -19,14 +20,23 @@ export const loader = async () => {
 const UserPage = () => {
   const { user } = useLoaderData();
   return (
-    <div>
-      <h1>User Page</h1>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-200">
+      <h1 className="text-2xl text-gray-700 mb-5">User Page</h1>
       {user.map((item, index) => {
         return (
-          <div key={index}>
-            <p>{item.email}</p>
-            <p>{item.name}</p>
-            <p>{item.bio}</p>
+          <div
+            key={index}
+            className="flex flex-col w-72 p-5 mb-5 bg-white rounded shadow-md"
+          >
+            <p className="mb-2">
+              <strong className="font-semibold">Email:</strong> {item.email}
+            </p>
+            <p className="mb-2">
+              <strong className="font-semibold">Name:</strong> {item.name}
+            </p>
+            <p className="mb-2">
+              <strong className="font-semibold">Bio:</strong> {item.bio}
+            </p>
           </div>
         );
       })}

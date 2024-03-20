@@ -24,3 +24,15 @@
   background-position: center;
   border-radius: 13%;
 }
+
+.home {
+  background: url("home-background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.about {
+  background: url("about-background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Add more classes for other pages */

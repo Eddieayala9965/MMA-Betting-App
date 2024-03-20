@@ -9,6 +9,7 @@ const UpdateProfileForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const user_id = localStorage.getItem("user_id");
     const requestOptions = {
       method: "PUT",
       headers: {
@@ -20,7 +21,7 @@ const UpdateProfileForm = () => {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/update/profile/51212cdf-ea40-4273-a71c-28b8241340c8)}`,
+        `http://127.0.0.1:8000/update/profile/${user_id}`,
         requestOptions
       );
       if (!response.ok) {
@@ -32,31 +33,39 @@ const UpdateProfileForm = () => {
   };
 
   return (
-    <div>
-      <h2>Update Profile</h2>
-      {error && <p>{error}</p>}
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Email:</label>
-          <input
-            type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Name:</label>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Bio:</label>
-          <textarea value={bio} onChange={(e) => setBio(e.target.value)} />
-        </div>
-        <button type="submit">Update Profile</button>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-200">
+      <h2 className="text-2xl text-gray-700 mb-5">Update Profile</h2>
+      {error && <p className="text-red-500 mb-5">{error}</p>}
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col w-72 p-5 bg-white rounded shadow-md"
+      >
+        <label className="font-semibold mb-2">Email:</label>
+        <input
+          type="text"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="p-2 mb-2 border rounded border-gray-300"
+        />
+        <label className="font-semibold mb-2">Name:</label>
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          className="p-2 mb-2 border rounded border-gray-300"
+        />
+        <label className="font-semibold mb-2">Bio:</label>
+        <textarea
+          value={bio}
+          onChange={(e) => setBio(e.target.value)}
+          className="p-2 mb-2 border rounded border-gray-300"
+        />
+        <button
+          type="submit"
+          className="p-2 mt-5 rounded bg-green-500 text-white"
+        >
+          Update Profile
+        </button>
       </form>
     </div>
   );
