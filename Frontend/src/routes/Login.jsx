@@ -116,7 +116,7 @@ const Login = () => {
             </Link>
           </p>
         </Form>
-        <div class="flex flex-col justify-center space-y-16 md:h-screen max-md:mt-16 min-h-full bg-gradient-to-r from-blue-500 to-blue-700 lg:px-8 px-4 py-4">
+        <div class="flex flex-col justify-center space-y-16 md:h-screen max-md:mt-16 min-h-full bg-gradient-to-r from-gray-500 to-blue-900 lg:px-8 px-4 py-4">
           <div>
             <h4 class="text-white text-lg font-semibold">
               Secure Authentication
