@@ -5,8 +5,7 @@ export const action = async ({ request }) => {
   const formData = await request.formData();
   const email = formData.get("email");
   const password = formData.get("password");
-  const name = formData.get("name");
-  const data = { email, password, name };
+  const data = { email, password };
   const url = `${import.meta.env.VITE_FASTAPI_URL}/login`;
 
   const userLogin = async (data) => {
@@ -71,21 +70,7 @@ const Login = () => {
                   />
                 </label>
               </div>
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  Name
-                  <input
-                    type="text"
-                    name="name"
-                    id="email"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="name@company.com"
-                  />
-                </label>
-              </div>
+              <div></div>
               <div>
                 <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                   Password

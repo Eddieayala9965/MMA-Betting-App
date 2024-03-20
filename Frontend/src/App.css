@@ -26,13 +26,14 @@
 }
 
 .home {
-  background: url("home-background.jpg") no-repeat center center fixed;
-  background-size: cover;
+  background-color: #111827;
+  hieight: 100vh;
 }
 
 .about {
   background: url("about-background.jpg") no-repeat center center fixed;
   background-size: cover;
+  hieight: 100vh;
 }
 
 /* Add more classes for other pages */

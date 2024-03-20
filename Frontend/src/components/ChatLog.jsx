@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import DeleteBtn from "./DeleteBtn";
 
 export const loader = async () => {
   const url = `http://127.0.0.1:8000/data`;
@@ -11,6 +12,7 @@ export const loader = async () => {
   const response = await fetch(url, options);
   const data = await response.json();
   console.log(data);
+
   return { data: data.data };
 };
 
@@ -22,10 +24,13 @@ const ChatLog = () => {
       <div>
         {data.map((message, index) => {
           return (
-            <ul key={index}>
-              <li>{message.message_content}</li>
-              <li>{message.response_content}</li>
-            </ul>
+            <div key={index}>
+              <ul>
+                <li>{message.message_content}</li>
+                <li>{message.response_content}</li>
+              </ul>
+              <DeleteBtn id={message.message_id} />
+            </div>
           );
         })}
       </div>

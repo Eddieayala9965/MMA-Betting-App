@@ -19,7 +19,6 @@ const Layout = ({ className }) => {
         </div>
 
         <Outlet className={`flex-grow`} />
-        <Footer />
       </div>
     </>
   );

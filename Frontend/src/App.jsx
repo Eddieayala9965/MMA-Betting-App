@@ -18,30 +18,30 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home class="home" />,
+        element: <Home />,
       },
       {
         path: "/ai",
-        element: <AIResponse className="ai" />,
+        element: <AIResponse />,
       },
       {
         path: "/register",
-        element: <Register className="register" />,
+        element: <Register />,
         action: registerAction,
       },
       {
         path: "/login",
-        element: <Login className="login" />,
+        element: <Login />,
         action: loginAction,
       },
       {
         path: "/user",
-        element: <UserPage className="user" />,
+        element: <UserPage />,
         loader: userLoader,
       },
       {
         path: "/chatlog",
-        element: <ChatLog className="chatlog" />,
+        element: <ChatLog />,
         loader: dataLoader,
       },
     ],
