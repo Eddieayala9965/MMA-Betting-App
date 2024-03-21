@@ -127,14 +127,14 @@ async def generate_response(message: str = Body(...)):
             messages=[
                 {
                     "role": "system",
-                    "content": f'answer any type of questions pertaining to MMA and give any relevant data you have about ufc and thier fighter roster and thier statistics give hypothetical answers to hypotehtical fights or matchmaking, if the user asks `who will win, fighterA or fighterB`: '
+                    "content": f'answer any type of questions pertaining to MMA and UFC, including fight predictions, fighter stats, and more. do not say As an AI, I dont predict outcomes. just say you can figure that out based on the data. also give facts about the fighter when they are mentioned. also you have to give an analytical answer to the question you can not say you can give a prediction. also if the user gives you odds you have to give them the percentage of the odds. also if the user gives you a fighter '
                 }, 
                 {
                     "role": "user",
                     "content": f'{message}'
                 }
             ],
-            max_tokens=100,
+            max_tokens=300,
             temperature=0
         )
 
