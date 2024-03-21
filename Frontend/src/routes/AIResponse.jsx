@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import ChatMessage from "../components/ChatMessage";
 
 const AIResponse = () => {
@@ -48,6 +49,14 @@ const AIResponse = () => {
             <span className="pl-2 pr-2 ">&#43;</span>
             New Chat
           </div>
+        </button>
+        <button>
+          <Link to={"/chatlog"}>
+            <div className=" p-4 border rounded-md hover:bg-opacity-50 transition duration-300 ease-in-out hover:bg-white border-black text-left ">
+              <span className="pl-2 pr-2 ">&#43;</span>
+              ChatLog
+            </div>
+          </Link>
         </button>
       </aside>
       <section className="flex-1 relative">

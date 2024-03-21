@@ -23,6 +23,7 @@ const ChatMessage = ({ message }) => {
           </p>
         </div>
       </div>
+      <div></div>
     </div>
   );
 };

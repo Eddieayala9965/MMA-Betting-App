@@ -6,10 +6,8 @@ const Layout = ({ className }) => {
   const primaryNav = [
     { title: "Home", url: "/" },
     { title: "MMA ChatGPT", url: "/ai" },
-    { title: "Register", url: "/register" },
     { title: "Login", url: "/login" },
     { title: "User", url: "/user" },
-    { title: "ChatLog", url: "/chatlog" },
   ];
   return (
     <>
