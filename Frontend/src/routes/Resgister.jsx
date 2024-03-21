@@ -51,9 +51,8 @@ const Register = () => {
                 Don't have an account?{" "}
                 <Link
                   to="/login"
-                  class="text-blue-600 font-semibold hover:underline"
+                  className="text-blue-600 font-semibold hover:underline"
                   href="javascript:void(0);"
-                  class="text-blue-600 font-semibold hover:underline ml-1"
                 >
                   Login here
                 </Link>
