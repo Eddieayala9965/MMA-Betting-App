@@ -35,35 +35,34 @@ export const action = async ({ request }) => {
 const Register = () => {
   return (
     <>
-      <div class="font-[sans-serif] text-[#333]">
-        <div class="min-h-screen flex fle-col items-center justify-center py-6 px-4">
-          <div class="grid md:grid-cols-2 items-center gap-10 max-w-6xl w-full">
-            <div class="max-md:text-center">
-              <h2 class="lg:text-5xl text-4xl font-extrabold lg:leading-[55px]">
+      <div className="font-[sans-serif] text-[#333]">
+        <div className="min-h-screen flex fle-col items-center justify-center py-6 px-4">
+          <div className="grid md:grid-cols-2 items-center gap-10 max-w-6xl w-full">
+            <div className="max-md:text-center">
+              <h2 className="lg:text-5xl text-4xl font-extrabold lg:leading-[55px]">
                 Welcome to MMAChatGPT!
               </h2>
-              <p class="text-sm mt-6">
+              <p className="text-sm mt-6">
                 Get ready to immerse yourself in thrilling discussions,
                 dissecting upcoming bouts, strategizing with fighters, and
                 analyzing techniques
               </p>
-              <p class="text-sm mt-10">
+              <p className="text-sm mt-10">
                 Don't have an account?{" "}
                 <Link
                   to="/login"
-                  class="text-blue-600 font-semibold hover:underline"
+                  className="text-blue-600 font-semibold hover:underline ml-1"
                   href="javascript:void(0);"
-                  class="text-blue-600 font-semibold hover:underline ml-1"
                 >
                   Login here
                 </Link>
               </p>
             </div>
             <Form
-              class="space-y-6 max-w-md md:ml-auto max-md:mx-auto w-full"
+              className="space-y-6 max-w-md md:ml-auto max-md:mx-auto w-full"
               method="POST"
             >
-              <h3 class="text-3xl font-extrabold mb-8 max-md:text-center">
+              <h3 className="text-3xl font-extrabold mb-8 max-md:text-center">
                 Register
               </h3>
               <div>
@@ -72,7 +71,7 @@ const Register = () => {
                   type="email"
                   autocomplete="email"
                   required
-                  class="bg-gray-100 w-full text-sm px-4 py-3.5 rounded-md outline-blue-600"
+                  className="bg-gray-100 w-full text-sm px-4 py-3.5 rounded-md outline-blue-600"
                   placeholder="Email address"
                 />
               </div>
@@ -82,48 +81,48 @@ const Register = () => {
                   type="password"
                   autocomplete="current-password"
                   required
-                  class="bg-gray-100 w-full text-sm px-4 py-3.5 rounded-md outline-blue-600"
+                  className="bg-gray-100 w-full text-sm px-4 py-3.5 rounded-md outline-blue-600"
                   placeholder="Password"
                 />
               </div>
-              <div class="flex items-center justify-between">
-                <div class="flex items-center">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center">
                   <input
                     id="remember-me"
                     name="remember-me"
                     type="checkbox"
-                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                   />
-                  <label for="remember-me" class="ml-3 block text-sm">
+                  <label for="remember-me" className="ml-3 block text-sm">
                     Remember me
                   </label>
                 </div>
-                <div class="text-sm">
+                <div className="text-sm">
                   <a
                     href="jajvascript:void(0);"
-                    class="text-blue-600 hover:text-blue-500"
+                    className="text-blue-600 hover:text-blue-500"
                   >
                     Forgot your password?
                   </a>
                 </div>
               </div>
-              <div class="!mt-10">
+              <div className="!mt-10">
                 <button
                   type="submit"
-                  class="w-full shadow-xl py-2.5 px-4 text-sm font-semibold rounded text-white bg-blue-600 hover:bg-blue-700 focus:outline-none"
+                  className="w-full shadow-xl py-2.5 px-4 text-sm font-semibold rounded text-white bg-blue-600 hover:bg-blue-700 focus:outline-none"
                 >
                   Register
                 </button>
               </div>
-              <p class="my-10 text-sm text-gray-400 text-center">
+              <p className="my-10 text-sm text-gray-400 text-center">
                 or continue with
               </p>
-              <div class="space-x-6 flex justify-center">
-                <button type="button" class="border-none outline-none">
+              <div className="space-x-6 flex justify-center">
+                <button type="button" className="border-none outline-none">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="30px"
-                    class="inline"
+                    className="inline"
                     viewBox="0 0 512 512"
                   >
                     <path
@@ -158,7 +157,7 @@ const Register = () => {
                     />
                   </svg>
                 </button>
-                <button type="button" class="border-none outline-none">
+                <button type="button" className="border-none outline-none">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="30px"
@@ -171,7 +170,7 @@ const Register = () => {
                     ></path>
                   </svg>
                 </button>
-                <button type="button" class="border-none outline-none">
+                <button type="button" className="border-none outline-none">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="30px"
