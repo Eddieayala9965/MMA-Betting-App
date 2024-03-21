@@ -61,7 +61,8 @@ async def update_profile(update: UpdateUser, id: str):
         response = supabase.table('profile').update({
             'email': update.email,
             'name': update.name,
-            'bio': update.bio
+            'bio': update.bio, 
+            
         }).eq('id', id).execute()
 
         return response
@@ -73,7 +74,7 @@ async def update_profile(update: UpdateUser, id: str):
 @app.get("/user")
 async def get_profile():
     try:
-        response = supabase.table('profile').select('email, name, bio').execute()
+        response = supabase.table('profile').select('email, name, bio, photo_url').execute()
         return response
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
