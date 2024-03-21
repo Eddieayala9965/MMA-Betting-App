@@ -41,8 +41,8 @@ const AIResponse = () => {
     setChatLog([]);
   };
   return (
-    <div className="flex max-w-full ml-0 mr-0 pl-0 pr-0 text-black text-center bg-color-dark-grey h-screen">
-      <aside className="sidemenu bg-color-greyblack">
+    <div className="flex flex-col md:flex-row max-w-full ml-0 mr-0 pl-0 pr-0 text-black text-center bg-color-dark-grey h-screen">
+      <aside className="md:w-1/4 bg-color-greyblack">
         <button onClick={clearChat}>
           <div className=" p-4 border rounded-md hover:bg-opacity-50 transition duration-300 ease-in-out hover:bg-white border-black text-left ">
             <span className="pl-2 pr-2 ">&#43;</span>
@@ -63,13 +63,11 @@ const AIResponse = () => {
             </div>
           </div>
         </div>
-        <div className="p-3 absolute  bottom-0 left-0 right-0">
+        <div className="p-3 absolute bottom-0 left-0 right-0">
           <form onSubmit={handleSubmit}>
             <input
-              className=" bg-gray-200 border-none border w-90 border-transparent rounded-lg outline-none p-3 text-color-white text-lg"
+              className="bg-gray-200 border-none border w-full md:w-90 border-transparent rounded-lg outline-none p-3 text-color-white text-lg"
               value={input}
-              id=""
-              rows="1"
               onChange={handleChange}
               placeholder="Type your message here..."
             />
