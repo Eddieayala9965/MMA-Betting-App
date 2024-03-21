@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sidemenu {
+  width: 260px;
+}
+
+.bg-color-greyblack {
+  background-color: #f9f9f9;
+}
+.bg-color-chatbox-dark-grey {
+  background-color: #2f3136;
+}
+.shadow-custom {
+  box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.2);
+}
+.w-90 {
+  width: 95%;
+}
+.background-img {
+  background-image: url("./img/robot.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 13%;
+}
+
+.home {
+  background-color: #111827;
+  hieight: 100vh;
+}
+
+.about {
+  background: url("about-background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  hieight: 100vh;
+}
+
+/* Add more classes for other pages */
