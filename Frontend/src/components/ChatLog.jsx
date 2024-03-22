@@ -21,18 +21,29 @@ const ChatLog = () => {
 
   return (
     <>
-      <div>
-        {data.map((message, index) => {
-          return (
-            <div key={index}>
-              <ul>
-                <li>{message.message_content}</li>
-                <li>{message.response_content}</li>
-              </ul>
-              <DeleteBtn id={message.message_id} />
-            </div>
-          );
-        })}
+      <div className="bg-gray-50 min-h-screen p-4">
+        {data.map((message, index) => (
+          <div
+            key={index}
+            className="mb-4 bg-white rounded shadow-lg transform transition duration-500 ease-in-out hover:scale-105 w-3/4 mx-auto border border-gray-500"
+          >
+            <nav>
+              <div className="flex justify-between items-center p-4">
+                <div className="flex flex-col justify-between items-start space-y-2 w-full">
+                  <span className="font-bold text-lg">
+                    {message.message_content}
+                  </span>
+                  <span className="text-gray-500">
+                    {message.response_content}
+                  </span>
+                </div>
+                <div className="px-2">
+                  <DeleteBtn id={message.message_id} />
+                </div>
+              </div>
+            </nav>
+          </div>
+        ))}
       </div>
     </>
   );
