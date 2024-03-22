@@ -59,7 +59,7 @@ client = OpenAI(
 )
 
 
-llm = ChatOpenAI(openai_api_key="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")
+llm = ChatOpenAI(openai_api_key=os.getenv("OPEN_API_KEY"))
 
 
 prompt = ChatPromptTemplate.from_messages([
