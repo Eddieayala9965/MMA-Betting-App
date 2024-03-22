@@ -13,7 +13,7 @@
     "db3": "json-server -p 4001 --watch data/small-data.json"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.39.7",
+    "@supabase/supabase-js": "^2.39.8",
     "dotenv": "^16.4.5",
     "localforage": "^1.10.0",
     "locomotive-scroll": "^5.0.0-beta.11",
