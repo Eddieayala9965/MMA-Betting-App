@@ -36,7 +36,7 @@ const UserPage = () => {
               <div
                 className="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center"
                 style={{
-                  backgroundImage: `url(${user.photo_url})`,
+                  backgroundImage: `url(${user.photo})`,
                 }}
               ></div>
               {/* User info */}
@@ -123,14 +123,12 @@ const UserPage = () => {
                   </svg>
                 </a>
               </div>
-              {/* end of links */}
             </div>
           </div>
-          {/* Second Column */}
+
           <div className="w-full lg:w-2/5">
-            {/* Big profile image for side column on desktop */}
             <img
-              src={user.photo_url}
+              src={user.photo}
               className="rounded-none lg:rounded-lg shadow-2xl hidden lg:block"
               alt="Profile"
             />
