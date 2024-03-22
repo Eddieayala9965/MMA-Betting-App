@@ -1,8 +1,11 @@
 import { PropTypes } from "prop-types";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import Logout from "./Logout";
 
 const Nav = ({ navItems, logOut }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="flex justify-between bg-gray-900 text-white w-screen px-5 xl:px-12 py-6">
       <div className="flex w-full items-center">
@@ -10,20 +13,34 @@ const Nav = ({ navItems, logOut }) => {
           <img className="h-16 w-16" src="../img/robot3.png" alt="robo" />
           <span> MMAChatGPT</span>
         </div>
-        <ul className="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
-          {navItems.map((link, index) => (
-            <li key={`${link.title}-${index}`}>
-              <Link to={link.url} className="hover:text-gray-200">
+        <ul
+          className={`flex flex-col md:flex-row items-center space-y-4 md:space-y-0 px-4 mx-auto font-semibold font-heading ${
+            isOpen ? "block" : "hidden"
+          } md:flex`}
+        >
+          <li className="flex flex-col sm:flex-col md:flex-row">
+            {navItems.map((link, index) => (
+              <Link
+                key={`${link.title}-${index}`}
+                to={link.url}
+                className="hover:text-gray-200 md:ml-4"
+              >
                 {link.title}
               </Link>
-            </li>
-          ))}
+            ))}
+          </li>
+          <li className="md:flex md:ml-4">
+            <button className="hover:text-gray-200">
+              <Logout />
+            </button>
+          </li>
         </ul>
-        <div className="hidden xl:flex item-center space-x-5 item-center">
-          <Logout />
-        </div>
       </div>
-      <a className="navbar-burger self-center mr-12 xl:hidden" href="#">
+      <a
+        className="navbar-burger self-center mr-12 xl:hidden"
+        href="#"
+        onClick={() => setIsOpen(!isOpen)}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6 hover:text-gray-200"

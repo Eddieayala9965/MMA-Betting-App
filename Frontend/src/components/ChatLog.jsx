@@ -25,7 +25,7 @@ const ChatLog = () => {
         {data.map((message, index) => (
           <div
             key={index}
-            className="mb-4 bg-white rounded shadow-lg transform transition duration-500 ease-in-out hover:scale-105 w-full md:w-3/4 mx-auto border border-gray-500 rounded-xl"
+            className="mb-4 bg-white shadow-lg transform transition duration-500 ease-in-out hover:scale-105 w-full md:w-3/4 mx-auto border border-gray-500 rounded-xl"
           >
             <nav>
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center p-4 border-b-2">
