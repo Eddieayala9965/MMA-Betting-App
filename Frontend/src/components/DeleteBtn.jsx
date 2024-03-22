@@ -5,12 +5,6 @@ const DeleteBtn = ({ id }) => {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
 
-  const fetchData = async () => {
-    const response = await fetch("http://127.0.0.1:8000/data");
-    const data = await response.json();
-    updateData(data);
-  };
-
   const handleClick = async () => {
     try {
       setIsLoading(true);
@@ -30,11 +24,7 @@ const DeleteBtn = ({ id }) => {
 
   return (
     <div>
-      <button
-        className="rounded-lg bg-red-600 py-3 px-6 text-center align-middle font-sans text-sm font-bold uppercase text-white shadow-md shadow-red-500/20 transition-all hover:shadow-lg hover:shadow-red-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-        onClick={handleClick}
-        disabled={isLoading}
-      >
+      <button onClick={handleClick} disabled={isLoading}>
         {isLoading ? "Deleting..." : "Delete Message"}
       </button>
       {error && <p>Error: {error}</p>}
