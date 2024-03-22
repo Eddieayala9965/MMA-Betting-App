@@ -15,8 +15,25 @@ import uuid
 import requests
 import os
 import json
+import asyncio
+import bs4
+import sys
+from langchain import hub
+from langchain_community.document_loaders import WebBaseLoader
+from langchain_community.document_loaders import TextLoader
+from langchain_community.vectorstores import Chroma
+from langchain.indexes.vectorstore import VectorstoreIndexCreator
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.runnables import RunnablePassthrough
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_openai import ChatOpenAI
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import StrOutputParser
+
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
+
 
 app = FastAPI()
 
@@ -35,6 +52,62 @@ origins = [
 
 supabase = create_supabase_client()
 
+
+client = OpenAI(
+  organization='org-joqjVZtb6tI7OPvBCosHKgwd',
+  api_key=os.getenv("OPEN_API_KEY")
+)
+
+
+llm = ChatOpenAI(openai_api_key="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")
+
+
+prompt = ChatPromptTemplate.from_messages([
+    ("system", "You are world class technical documentation writer."),
+    ("user", "{input}")
+])
+
+output_parser = StrOutputParser()
+
+chain = prompt | llm | output_parser
+
+chain.invoke({"input": "how can langsmith help with testing?"})
+print(chain)
+
+
+
+
+@app.post("/generate")
+async def generate_response(message: str = Body(...)):
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4", 
+            messages=[
+                {
+                    "role": "system",
+                    "content": f'answer questions based off this'
+                }, 
+                {
+                    "role": "user",
+                    "content": f'{message}'
+                }
+            ],
+            max_tokens=300,
+            temperature=0
+        )
+        supabase.table('message').insert([
+            {
+            'message_content': message, 
+            'response_content': response.choices[0].message.content}
+        ]).execute()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    return JSONResponse(content={"data": response.choices[0].message.content})
+
+
+
+
+
 def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
     user = supabase.auth.get_user()
     if user is None:
@@ -43,12 +116,6 @@ def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
             detail="Invalid email or password",
         )
     return user
-
-client = OpenAI(
-  organization='org-joqjVZtb6tI7OPvBCosHKgwd',
-  api_key=os.getenv("OPEN_API_AIKEY")
-)
-
 
 @app.put("/update/profile/{id}")
 async def update_profile(update: UpdateUser, id: str):
@@ -74,7 +141,7 @@ async def update_profile(update: UpdateUser, id: str):
 @app.get("/user")
 async def get_profile():
     try:
-        response = supabase.table('profile').select('email, name, bio, photo_url').execute()
+        response = supabase.table('profile').select('email, name, bio, photo').execute()
         return response
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -116,38 +183,6 @@ def reset_conversation_id():
 
 
 
-@app.post("/generate")
-async def generate_response(message: str = Body(...)):
-
-    
-    try:
-        # data = await get_fighter_data("http://localhost:4001/fighters")
-        response = client.chat.completions.create(
-            model="gpt-4", 
-            messages=[
-                {
-                    "role": "system",
-                    "content": f'answer any type of questions pertaining to MMA and UFC, including fight predictions, fighter stats, and more. do not say As an AI, I dont predict outcomes. just say you can figure that out based on the data. also give facts about the fighter when they are mentioned. also you have to give an analytical answer to the question you can not say you can give a prediction. also if the user gives you odds you have to give them the percentage of the odds. also if the user gives you a fighter '
-                }, 
-                {
-                    "role": "user",
-                    "content": f'{message}'
-                }
-            ],
-            max_tokens=300,
-            temperature=0
-        )
-
-        supabase.table('message').insert([
-            {
-            'message_content': message, 
-            'response_content': response.choices[0].message.content}
-        ]).execute()
-
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-    return JSONResponse(content={"data": response.choices[0].message.content})
 
 
 
@@ -187,6 +222,8 @@ def register_user(request: User):
         "password": password,
     })
     return response
+
+
 
 
 
