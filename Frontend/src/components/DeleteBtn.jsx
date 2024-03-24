@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const DeleteBtn = ({ id }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -32,6 +32,7 @@ const DeleteBtn = ({ id }) => {
         {isLoading ? "Deleting..." : "Delete Message"}
       </button>
       {error && <p>Error: {error}</p>}
+
       {success && <p>Message deleted successfully!</p>}
     </div>
   );

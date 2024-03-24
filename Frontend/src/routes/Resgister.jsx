@@ -69,7 +69,7 @@ const Register = () => {
                 <input
                   name="email"
                   type="email"
-                  autocomplete="email"
+                  autoComplete="email"
                   required
                   className="bg-gray-100 w-full text-sm px-4 py-3.5 rounded-md outline-blue-600"
                   placeholder="Email address"
@@ -79,7 +79,7 @@ const Register = () => {
                 <input
                   name="password"
                   type="password"
-                  autocomplete="current-password"
+                  autoComplete="current-password"
                   required
                   className="bg-gray-100 w-full text-sm px-4 py-3.5 rounded-md outline-blue-600"
                   placeholder="Password"
@@ -93,7 +93,7 @@ const Register = () => {
                     type="checkbox"
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                   />
-                  <label for="remember-me" className="ml-3 block text-sm">
+                  <label htmlFor="remember-me" className="ml-3 block text-sm">
                     Remember me
                   </label>
                 </div>
