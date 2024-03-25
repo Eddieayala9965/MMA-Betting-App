@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const UpdateProfileForm = () => {
   const [email, setEmail] = useState("");
@@ -6,9 +7,20 @@ const UpdateProfileForm = () => {
   const [bio, setBio] = useState("");
   const [error, setError] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+  const handleBioChange = (e) => {
+    setBio(e.target.value);
   };
 
   const handleSubmit = async (e) => {
@@ -33,6 +45,7 @@ const UpdateProfileForm = () => {
         throw new Error("Failed to update profile");
       }
       toggleModal();
+      navigate("/user");
     } catch (error) {
       setError("Failed to update profile. Please try again later.");
     }
@@ -54,7 +67,6 @@ const UpdateProfileForm = () => {
               onClick={toggleModal}
               className="absolute right-0 top-0 m-2"
             >
-              {" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30px"
@@ -82,20 +94,20 @@ const UpdateProfileForm = () => {
               <input
                 type="text"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={handleEmailChange}
                 className="p-2 mb-2 border rounded border-gray-300"
               />
               <label className="font-semibold mb-2">Name:</label>
               <input
                 type="text"
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={handleNameChange}
                 className="p-2 mb-2 border rounded border-gray-300"
               />
               <label className="font-semibold mb-2">Bio:</label>
               <textarea
                 value={bio}
-                onChange={(e) => setBio(e.target.value)}
+                onChange={handleBioChange}
                 className="p-2 mb-2 border rounded border-gray-300"
               />
               <button
