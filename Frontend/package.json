@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "db": "json-server -p 4000 --watch data/fighters.json",
     "db2": "json-server -p 4001 --watch data/odds.json",
-    "db3": "json-server -p 4001 --watch data/small-data.json"
+    "db3": "json-server -p 4002 --watch data/small-data.json"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.7",

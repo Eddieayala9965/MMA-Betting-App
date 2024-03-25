@@ -163,9 +163,7 @@ const Home = () => {
           <div className="px-4 sm:px-10 mt-28">
             <div className="max-w-7xl w-full mx-auto">
               <div className="flex items-start gap-10">
-                {" "}
-                {/* Change here */}
-                <div className="flex justify-center gap-5">
+                <div className="flex md:flex-col md:align-center md:text-center sm:flex-col sm:align-center justify-center gap-5">
                   <div className="flex flex-col">
                     <h2 className="md:text-4xl text-3xl font-extrabold mb-6">
                       Real-Time Odds Analysis
@@ -177,16 +175,11 @@ const Home = () => {
                       informed predictions.
                     </p>
                   </div>
-
-                  <div className="flex flex-col">
-                    {" "}
-                    {/* Change here */}
-                    <div className="w-1/2 items-center">
-                      <div className="">
-                        <h2 className="md:text-4xl text-3xl font-extrabold">
-                          Interactive ChatGPT
-                        </h2>
-                      </div>
+                  <div className="flex flex-col md:text-center">
+                    <div className="">
+                      <h2 className="md:text-4xl text-3xl font-extrabold mb-6">
+                        Interactive ChatGPT
+                      </h2>
                     </div>
                     <div className="mt-4">
                       <p>
