@@ -62,100 +62,27 @@ client = OpenAI(
   api_key=os.getenv("OPEN_API_KEY")
 )
 
-
-
-# Initialize ChatOpenAI instance for language model
-llm = ChatOpenAI(openai_api_key=os.getenv("OPEN_API_KEY2"))
-
-# Setup for chat prompt template
-prompt = ChatPromptTemplate.from_messages([
-    ("system", "You are a world-class technical documentation writer."),
-    ("user", "{input}")
-])
-
-# Setup for output parser
-output_parser = StrOutputParser()
-
-# Chain setup for handling prompts, language model, and output parsing
-chain = prompt | llm | output_parser
-
-# Invoke chain to interact with language model
-chain.invoke({"input": "how can langsmith help with testing?"})
-print(chain)
-
-# Load UFC rankings documents using WebBaseLoader
-loader = WebBaseLoader("https://www.ufc.com/rankings")
-docs = loader.load()
-
-# Initialize embeddings for UFC rankings documents
-embeddings = OpenAIEmbeddings(openai_api_key=os.getenv("OPEN_API_KEY2"))
-
-# Split documents into text segments and create vectors using FAISS
-text_splitter = RecursiveCharacterTextSplitter()
-documents = text_splitter.split_documents(docs)
-vector = FAISS.from_documents(documents, embeddings)
-
-# Setup for document-based chat prompt template
-prompt = ChatPromptTemplate.from_template("""Answer the following question based only on the provided context:
-<context>
-{context}
-</context>
-Question: {input}""")
-
-# Chain setup for handling prompts with documents
-document_chain = create_stuff_documents_chain(llm, prompt)
-
-# Invoke document chain to answer specific UFC-related question
-document_chain.invoke({
-    "input": "Who is the current UFC champion in WELTERWEIGHT ?",
-    "context": [Document(page_content="we can give you the information you need about the current UFC rankings")]
-})
-
-# Initialize retriever for document retrieval
-retriever = vector.as_retriever()
-
-# Setup retrieval chain to retrieve relevant information from documents
-retrieval_chain = create_retrieval_chain(retriever, document_chain)
-
-# Invoke retrieval chain to answer a general UFC-related question
-response = retrieval_chain.invoke({"input": "Who is the number 1 pound-for-pound fighter in the UFC?"})
-print(response["answer"])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+async def get_fighter_data(url):
+    try:
+        response = requests.get(url)
+        if response.status_code == 200:
+            data = response.json()
+            return data
+        else:
+            raise HTTPException(status_code=response.status_code, detail="Failed to fetch data")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/generate")
 async def generate_response(message: str = Body(...)):
     try:
+        fighter_data = await get_fighter_data("http://localhost:4002/fighters")
         response = client.chat.completions.create(
             model="gpt-4", 
             messages=[
                 {
                     "role": "system",
-                    "content": f'answer questions based off this'
+                    "content": f'you will answer questions about {fighter_data}, when asked about fighter data. you will provide the correct answer. When asked about fight predictions you have to proivde a prediction for the fight based on the data you have on fighter data ,you have to give a predictioin based on the data you have and what betting odds they give you.If the user does not provide any odds data than answer regardless, Also Max Holloway and Justin Gaethje are fighting April 13th, when given a prediction you need to give an answer to who will win and how they will win.'
                 }, 
                 {
                     "role": "user",
@@ -216,30 +143,10 @@ async def get_profile():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-async def get_fighter_data(url):
-    try:
-        response = requests.get(url)
-        if response.status_code == 200:
-            data = response.json()
-            return data
-        else:
-            raise HTTPException(status_code=response.status_code, detail="Failed to fetch data")
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+
     
 
-async def get_odds_data(url):
-    try:
-        response = requests.get(url)
 
-        if response.status_code == 200:
-            data = response.json()
-           
-            return data
-        else:
-            raise HTTPException(status_code=response.status_code, detail="Failed to fetch data")
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
 
 
 
