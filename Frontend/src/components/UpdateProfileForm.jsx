@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const UpdateProfileForm = () => {
   const [email, setEmail] = useState("");
@@ -6,9 +7,20 @@ const UpdateProfileForm = () => {
   const [bio, setBio] = useState("");
   const [error, setError] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+  const handleBioChange = (e) => {
+    setBio(e.target.value);
   };
 
   const handleSubmit = async (e) => {
@@ -33,6 +45,7 @@ const UpdateProfileForm = () => {
         throw new Error("Failed to update profile");
       }
       toggleModal();
+      navigate("/user");
     } catch (error) {
       setError("Failed to update profile. Please try again later.");
     }
@@ -54,7 +67,6 @@ const UpdateProfileForm = () => {
               onClick={toggleModal}
               className="absolute right-0 top-0 m-2"
             >
-              {" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30px"
@@ -63,9 +75,9 @@ const UpdateProfileForm = () => {
               >
                 <path
                   fill="currentColor"
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M6.793 7.5L4.146 4.854l.708-.708L7.5 6.793l2.646-2.647l.708.708L8.207 7.5l2.647 2.646l-.708.707L7.5 8.208l-2.646 2.646l-.708-.707z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 />
               </svg>
             </button>
@@ -75,29 +87,27 @@ const UpdateProfileForm = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-3.5 ml-2 cursor-pointer shrink-0 fill-black hover:fill-red-500"
                 viewBox="0 0 320.591 320.591"
-              >
-                {/* SVG paths */}
-              </svg>
+              ></svg>
             </div>
             <form onSubmit={handleSubmit} className="my-6 flex flex-col">
               <label className="font-semibold mb-2">Email:</label>
               <input
                 type="text"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={handleEmailChange}
                 className="p-2 mb-2 border rounded border-gray-300"
               />
               <label className="font-semibold mb-2">Name:</label>
               <input
                 type="text"
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={handleNameChange}
                 className="p-2 mb-2 border rounded border-gray-300"
               />
               <label className="font-semibold mb-2">Bio:</label>
               <textarea
                 value={bio}
-                onChange={(e) => setBio(e.target.value)}
+                onChange={handleBioChange}
                 className="p-2 mb-2 border rounded border-gray-300"
               />
               <button

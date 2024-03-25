@@ -168,366 +168,380 @@
       }
     },
     {
-      "Name": "Aljamain Sterling",
-      "Nickname": "Funk Master",
-      "Division Title": "Featherweight Division",
+      "Name": "Justin Gaethje",
+      "Nickname": "The Highlight",
+      "Division Title": "Lightweight Division",
       "Division Body": {
-        "Wins": "23",
+        "Wins": "26",
         "Losses": "4",
         "Draws": "0"
       },
       "Fighter Bio": {
         "Status": "Active",
-        "Hometown": "United States",
-        "Trains at": "Serra-Longo - Long Island, NY",
-        "Fighting style": "Kickboxer",
-        "Age": "34",
-        "Height": "67.00",
-        "Weight": "135.00",
-        "Octagon Debut": "Feb. 22, 2014",
-        "Reach": "71.00",
-        "Leg reach": "39.00"
-      },
-      "Win Stats": {
-        "Wins by Knockout": "3",
-        "Wins by Submission": "8"
-      },
-      "Records": {
-        "Sig. Str. Landed": "4.73",
-        "Sig. Str. Absorbed": "2.41",
-        "Takedown avg": "1.97",
-        "Submission avg": "0.78",
-        "Sig. Str. Defense": "58%",
-        "Takedown Defense": "45%",
-        "Knockdown Avg": "0.00",
-        "Average fight time": "13:12",
-        "Sig. Strikes Landed": "1186",
-        "Sig. Strikes Attempted": "2262",
-        "Takedowns Landed": "21",
-        "Takedowns Attempted": "136",
-        "Striking accuracy": "52%",
-        "Takedown Accuracy": "24%"
-      },
-      "Win by Method": {
-        "Standing": "784 (66%)",
-        "Clinch": "180 (15%)",
-        "Ground": "222 (19%)"
-      },
-      "Last Fight": {
-        "Event": "Sterling vs O'Malley",
-        "Date": "Aug. 19, 2023"
-      },
-      "Fighter Facts": [
-        "Pro since 2011",
-        "Eight wins by submission (5 RNC, arm triangle, guillotine, modified kneebar), three by KO",
-        "Has won 11 of his last 13",
-        "Had 6-1 amateur record",
-        "Four first round finishes",
-        "Two-time Division III All-American wrestler",
-        "Had 87-27 college wrestling record",
-        "Origin of nickname: It comes from my wrestling style."
-      ],
-      "UFC History": [
-        "UFC 292(8/19/23) Sterling was stopped by Sean O'Malley via strikes at :51 of the second round, losing the UFC bantamweight title",
-        "UFC 288(5/6/23) Sterling won a five round split decision over Henry Cejudoto retain his UFC bantamweight title",
-        "UFC 280(10/22/22) Sterling stopped TJ Dillashaw via strikes at 3:44 of the second round to retain his UFC bantamweight title",
-        "UFC 273(4/9/22) Sterling won a five-round split decision over Petr Yan to retain his UFC bantamweight title",
-        "UFC 259(3/6/21) Sterling defeated Petr Yan via disqualification (illegal knee) at 4:29 of the fourth round to win the UFC bantamweight title",
-        "UFC 250(6/6/20) Sterling submitted Cory Sandhagen via rear naked choke at 1:28 of the first round",
-        "UFC 238(6/8/19) Sterling won a three round unanimous decision over Pedro Munhoz",
-        "UFC on ESPN(2/17/19) Sterling won a three round unanimous decision over Jimmie Rivera",
-        "UFC 228(9/8/18) Sterling submitted Cody Stamann via modified kneebar at 3:42 of the second round",
-        "UFC Fight Night(4/21/18) Sterling won a three round unanimous decision over Brett Johns",
-        "UFC Fight Night(12/9/17) Sterling was knocked out by Marlon Moraes at 1:07 of the first round",
-        "UFC 214(7/29/17) Sterling won a three round unanimous decision over Renan Barao",
-        "UFC on FOX(4/15/17) Sterling won a three round unanimous decision over Augusto Mendes",
-        "UFC on FOX(1/28/17) Sterling lost a three round split decision to Raphael Assuncao",
-        "UFC Fight Night(5/29/16) Sterling lost a three round split decision to Bryan Caraway",
-        "UFC Fight Night(12/10/15) Sterling submitted Johnny Eduardo via guillotine choke at 4:28 of the second round",
-        "UFC on FOX(4/18/15) Sterling submitted Takeya Mizugaki via arm triangle at 2:11 of the third round",
-        "UFC Fight Night(7/16/14) Sterling stopped Hugo Viana via strikes at 3:50 of the third round",
-        "UFC 170(2/22/14) Sterling won a three round unanimous decision over Cody Gibson"
-      ],
-      "Additional Information": {
-        "TRAINING:": "We've worked a lot on reaction time, brain training, standup, and my personal favorite  wrestling.",
-        "When and why did you start training for fighting?": "I started training because I saw a former teammate/colleague - Jon Jones - training, and I also saw a few TUF shows. I asked him for an opportunity to train with him, I was invited and I havent looked back since. I thought it was tailor-made for me because I love one-on-one competition. Its your skill set against my skill set. Nothing is more rewarding than knowing you earned your right to win!",
-        "What ranks and titles have you held?": "Im a brown belt in BJJ, and a 2x All-American for SUNY Cortland at 133 and 141 lbs. I've held a belt at 135 and 145 lbs as an amateur. And I've held the Ring of Combat belt at 135 lbs, before vacating it to fight at CFFC and become their first 135 lbs champ.",
-        "Do you have any heroes?": "No heroes growing up. But I do look up to Al Iaquinta and Chris Weidman as role models now. I always try to match their work ethic and push myself past my limits.",
-        "What does it mean for you to fight in the UFC?": "Fighting the UFC means a lot to me. I finally feel like all the hard work and dedication I put into making this a career hasn't been for nothing. All the hours my trainers and I put in will not go unnoticed. I'm an animal just trying to do savage-like things out there! When I dream, I work. REALITY! Thats what I live by. And Im gonna go get it!",
-        "Did you go to college and if so what degree did you earn?": "I went to SUNY Morrisville, studying accounting, before transferring to SUNY Cortland and getting my B.A. in Physical Education.",
-        "What was your job before you started fighting?": "I was working as a shoe salesman at Saks Fifth, before being fired because I needed to get last minute things for school and called out of work. Then I just cut hair in school to help get by.",
-        "Specific accomplishments in amateur competition?": "Placed 4th & 6th at 133 lbs and 141 lbs as a JR & SR, respectively.",
-        "Ranks in any martial arts styles:": "I'm a brown belt under Matt The Great Serra, black belt in wrestling, a third degree black-belt in Funk-Jitsu, and I just got a stripe for having wicked muscles",
-        "Favorite grappling technique:": "Rear naked choke all day!!",
-        "Favorite Striking technique:": "Leg kicks, to chop down the tree!"
-      }
-    },
-    {
-      "Name": "Cory Sandhagen",
-      "Nickname": "Sandman",
-      "Division Title": "Bantamweight Division",
-      "Division Body": {
-        "Wins": "17",
-        "Losses": "4",
-        "Draws": "0"
-      },
-      "Fighter Bio": {
-        "Status": "Active",
-        "Hometown": "Aurora, United States",
+        "Hometown": "Tucson, United States",
+        "Trains at": "Genesis Training Center",
         "Fighting style": "MMA",
-        "Age": "31",
+        "Age": "35",
         "Height": "71.00",
-        "Weight": "139.50",
-        "Octagon Debut": "Jan. 28, 2018",
+        "Weight": "156.00",
+        "Octagon Debut": "Jul. 8, 2017",
         "Reach": "70.00",
         "Leg reach": "40.00"
       },
       "Win Stats": {
-        "Wins by Knockout": "7",
-        "Wins by Submission": "3",
-        "First Round Finishes": "6"
+        "Wins by Knockout": "20",
+        "First Round Finishes": "9"
       },
       "Records": {
-        "Sig. Str. Landed": "5.33",
-        "Sig. Str. Absorbed": "3.40",
-        "Takedown avg": "1.36",
-        "Submission avg": "0.34",
-        "Sig. Str. Defense": "58%",
-        "Takedown Defense": "64%",
-        "Knockdown Avg": "0.34",
-        "Average fight time": "13:34",
-        "Sig. Strikes Landed": "939",
-        "Sig. Strikes Attempted": "2112",
-        "Takedowns Landed": "1",
-        "Takedowns Attempted": "48",
-        "Striking accuracy": "44%",
-        "Takedown Accuracy": "33%"
-      },
-      "Win by Method": {
-        "Standing": "774 (82%)",
-        "Clinch": "34 (4%)",
-        "Ground": "131 (14%)"
-      },
-      "Last Fight": {
-        "Event": "Sandhagen vs Font",
-        "Date": "Aug. 5, 2023"
-      },
-      "Fighter Facts": [
-        "Pro since 2015",
-        "Seven wins by KO, three by submission (RNC, armbar, undisclosed choke)",
-        "Six first round finishes",
-        "Has won 12of his last 15and threein a row",
-        "Had 3-1 amateur record"
-      ],
-      "UFC History": [
-        "UFC on ESPN(8/5/23) Sandhagen won a five round unanimous decision over Rob Font",
-        "UFC on ESPN(3/25/23) Sandhagen won a five round split decision over Marlon Vera",
-        "UFC Fight Night(9/17/22) Sandhagen defeated Song Yadong via TKO (doctor stoppage) at 5:00 of the fourth round",
-        "UFC 267(10/30/21) Sandhagen lost a five round unanimous decision to Petr Yan in a fight for the interim UFC bantamweight title",
-        "UFC Fight Night(7/24/21) Sandhagen lost a five-round split decision to TJ Dillashaw",
-        "UFC Fight Night(2/6/21) Sandhagen knocked out Frankie Edgar at :28 of the first round",
-        "UFC Fight Night(10/10/20) Sandhagen stopped Marlon Moraes via strikes at 1:03 of the second round",
-        "UFC 250(6/6/20) Sandhagen was submitted by Aljamain Sterling via rear naked choke at 1:28 of the first round",
-        "UFC 241(8/17/19) Sandhagen won a three round unanimous decision over Raphael Assuncao",
-        "UFC Fight Night(4/27/19) Sandhagen won a three round split decision over John Lineker",
-        "UFC Fight Night(1/19/19) Sandhagen submitted Mario Bautista via armbar at 3:31 of the first round",
-        "UFC Fight Night(8/25/18) Sandhagen stopped Iuri Alcantara via strikes at 1:01 of the second round",
-        "UFC on FOX(1/27/18) Sandhagen stopped Austin Arnett via strikes at 3:48 of the second round"
-      ],
-      "Additional Information": {
-        "When and why did you start training for fighting?": "I dont have an exciting story. I saw it on TV and signed up.",
-        "What ranks and titles have you held?": "Amateur North American and World kickboxing title. Brown belt in BJJ. Undefeated kickboxer",
-        "Do you have any heroes?": "Martin Luther King and Bob Marley",
-        "What does it mean for you to fight in the UFC?": "Its another step that validates Im on the right path of being the best fighter in the world.",
-        "Did you go to college and if so what degree did you earn?": "CU Boulder. Psychology BA",
-        "What was your job before you started fighting?": "I work for a nonprofit that helps abused and neglected kids. I still currently work there and love it. Mount Saint Vincents in Denver",
-        "Specific accomplishments in amateur competition?": "WKA World kickboxing champ",
-        "Favorite grappling technique:": "Leg locks",
-        "Favorite Striking technique:": "My defense"
-      }
-    },
-    {
-      "Name": "Petr Yan",
-      "Nickname": "No Mercy",
-      "Division Title": "Bantamweight Division",
-      "Division Body": {
-        "Wins": "16",
-        "Losses": "5",
-        "Draws": "0"
-      },
-      "Fighter Bio": {
-        "Status": "Active",
-        "Hometown": "Krasnoyarsk Krai, Russia",
-        "Trains at": "Team Yan",
-        "Fighting style": "Boxer",
-        "Age": "31",
-        "Height": "67.50",
-        "Weight": "136.00",
-        "Octagon Debut": "Jun. 23, 2018",
-        "Reach": "67.00",
-        "Leg reach": "38.00"
-      },
-      "Win Stats": {
-        "Wins by Knockout": "7",
-        "Wins by Submission": "1",
-        "First Round Finishes": "3"
-      },
-      "Records": {
-        "Sig. Str. Landed": "5.03",
-        "Sig. Str. Absorbed": "4.26",
-        "Takedown avg": "1.71",
-        "Submission avg": "0.15",
-        "Sig. Str. Defense": "59%",
-        "Takedown Defense": "85%",
-        "Knockdown Avg": "0.74",
-        "Average fight time": "16:50",
-        "Sig. Strikes Landed": "1016",
-        "Sig. Strikes Attempted": "1900",
+        "Sig. Str. Landed": "7.35",
+        "Sig. Str. Absorbed": "7.50",
+        "Takedown avg": "0.13",
+        "Submission avg": "0.00",
+        "Sig. Str. Defense": "54%",
+        "Takedown Defense": "75%",
+        "Knockdown Avg": "0.77",
+        "Average fight time": "09:46",
+        "Sig. Strikes Landed": "861",
+        "Sig. Strikes Attempted": "1429",
         "Takedowns Landed": "",
-        "Takedowns Attempted": "44",
-        "Striking accuracy": "53%",
-        "Takedown Accuracy": "52%"
+        "Takedowns Attempted": "4",
+        "Striking accuracy": "60%",
+        "Takedown Accuracy": "25%"
       },
       "Win by Method": {
-        "Standing": "720 (71%)",
-        "Clinch": "118 (12%)",
-        "Ground": "178 (18%)"
+        "Standing": "746 (87%)",
+        "Clinch": "101 (12%)",
+        "Ground": "14 (2%)"
       },
       "Last Fight": {
-        "Event": "Yan vs Dvalishvili",
-        "Date": "Mar. 11, 2023"
+        "Event": "Poirier vs Gaethje",
+        "Date": "Jul. 29, 2023"
       },
       "Fighter Facts": [
-        "Pro since 2014",
-        "Seven wins by KO, one by submission (guillotine)",
-        "Three first round finishes",
-        "Has won 11 of his last 15",
-        "Avenged split decision loss to Magomed Magomedov in 2016 with a 2017 unanimous decision win"
+        "Pro since 2011",
+        "20 wins by KO, one by submission (RNC)",
+        "Nine first round finishes",
+        "Has won sevenof his last nine",
+        "Owns wins over UFC vets Drew Fickett, Dan Lauzon, Melvin Guillard, Brian Foster and Brian Cobb",
+        "Has also defeated PRIDE vet Luiz Firmino and Strikeforce vet JZ Cavalcante"
       ],
       "UFC History": [
-        "UFC Fight Night(3/11/23) Yan lost a five round unanimous decision to Merab Dvalishvili",
-        "UFC 280(10/22/22) Yan lost a three round split decision to Sean O'Malley",
-        "UFC 273(4/9/22) Yan lost a five-round split decision to Aljamain Sterling in a bout for the undisputed bantamweight title",
-        "UFC 267(10/30/21) Yan won a five round unanimous decision over Cory Sandhagen to win the interim UFC bantamweight title",
-        "UFC 259(3/6/21) Yan lost via disqualification (illegal knee) to Aljamain Sterling at 4:29 of the fourth round, losing his UFC bantamweight title",
-        "UFC 251(7/12/20) Yan stopped Jose Aldo via strikes at 3:24 of the fifth round to win the vacant UFC bantamweight title",
-        "UFC 245(12/14/19) Yan knocked out Urijah Faber at :43 of the third round",
-        "UFC 238(6/8/19) Yan won a three round unanimous decision over Jimmie Rivera",
-        "UFC Fight Night(2/23/19) Yan won a three round unanimous decision over John Dodson",
-        "UFC 232(12/29/18) Yan scored a TKO (corner stoppage) over Douglas Silva de Andrade at 5:00 of the second round",
-        "UFC Fight Night(9/15/18) Yan won a three round unanimous decision over Jin Soo Son",
-        "UFC Fight Night(6/23/18) Yan stopped Teruto Ishihara at 3:28 of the first round"
+        "UFC 291(7/29/23) Gaethje knocked out Dustin Poirier at 1:00 of the second round",
+        "UFC 286(3/18/23) Gaethje won a three round majority decision over Rafael Fiziev",
+        "UFC 274(5/7/22) Gaethje was submitted by Charles Oliveira at 3:22 of the first round in a bout for the vacant UFC lightweight title",
+        "UFC 268(11/6/21) Gaethje won a three-round unanimous decision over Michael Chandler",
+        "UFC 254(10/24/20) Gaethje was submitted by Khabib Nurmagomedov via triangle choke at 1:34 of the second round in a fight for the UFC lightweight title",
+        "UFC 249(5/9/20) Gaethje stopped Tony Ferguson via strikes at 3:39 of the fifth round to win the interim UFC lightweight title",
+        "UFC Fight Night(9/14/19) Gaethje stopped Donald Cerrone via strikes at 4:18 of the first round",
+        "UFC on ESPN(3/30/19) Gaethje knocked out Edson Barboza at 2:30 of the first round",
+        "UFC Fight Night(8/25/18) Gaethje knocked out James Vick at 1:27 of the first round",
+        "UFC on FOX(4/14/18) Gaethje was stopped by Dustin Poirier via strikes at :33 of the fourth round",
+        "UFC 218(12/2/17) Gaethje was knocked out by Eddie Alvarez at 3:59 of the third round",
+        "TUF 25 Finale(7/7/17) Gaethje stopped Michael Johnson via strikes at 4:48 of the second round"
       ],
       "Additional Information": {
-        "When and why did you start training for fighting?": "I started training boxing when I was 13 years old. After seven years, I started training MMA.",
-        "What ranks and titles have you held?": "Interim UFC bantamweight champion, former UFC bantamweight champion, ACB bantamweight world champion",
-        "Do you have any heroes?": "I liked to watch Mike Tyson, Kostya Tszyu and Muhammad Ali fights and I looked up to them.",
-        "What does it mean for you to fight in the UFC?": "UFC is the pinnacle of this sport. For me, it's similar to going to the Olympics. That's why Im really happy I joined UFC and now I need to showcase myself there.",
-        "Did you go to college and if so what degree did you earn?": "I graduated from the athletic institute. I was studying there for five years and I specialized in being a boxing trainer for youth.",
-        "What was your job before you started fighting?": "I had part-time security jobs.",
-        "Specific accomplishments in amateur competition?": "Winner of youth regional championships in Russia",
-        "Ranks in any martial arts styles:": "Master of Sport in Boxing, BJJ blue belt.",
-        "Favorite grappling technique:": "Chokes",
+        "When and why did you start training for fighting?": "I grew up wrestling and fighting was never something I ever dreamed about doing. I was never in a streetfight, and then I started fighting amateur fights in college and won seven in a row and after college I turned pro and I havent lost one. I just wanted to be the best at whatever I was doing, and thats put me in this great position that Im in right now.",
+        "What ranks and titles have you held?": "Former interim UFC lightweight champion,",
+        "Do you have any heroes?": "My parents",
+        "What does it mean for you to fight in the UFC?": "Its definitely something special to me, but the way that Im approaching this is that this fight is no different than the very first fight I ever had.",
+        "Did you go to college and if so what degree did you earn?": "University of Northern Colorado. I am an internship away from completing my Bachelors degree in Human Services",
+        "What was your job before you started fighting?": "I was a student and then I would take random jobs. I worked in demolition, I did painting, I was a bouncer at a billiards club, so anything to be able to keep training and to follow my goal.",
+        "Specific accomplishments in amateur competition?": "7-0 MMA record, 2010 Division I All-American, finished seventh in NCAA tournament",
+        "Favorite grappling technique:": "Blast double leg",
         "Favorite Striking technique:": "Uppercut"
       }
     },
     {
-      "Name": "Marlon Vera",
-      "Nickname": "Chito",
-      "Division Title": "Bantamweight Division",
+      "Name": "Max Holloway",
+      "Nickname": "Blessed",
+      "Division Title": "Featherweight Division",
       "Division Body": {
-        "Wins": "21",
-        "Losses": "8",
-        "Draws": "1"
+        "Wins": "25",
+        "Losses": "7",
+        "Draws": "0"
       },
       "Fighter Bio": {
         "Status": "Active",
-        "Hometown": "Chone, Ecuador",
-        "Trains at": "Team 5050 Guayaquil Ecuador",
-        "Fighting style": "Grappler",
+        "Hometown": "Waianae, United States",
+        "Trains at": "Hawaii Elite MMA - Hawaii",
+        "Fighting style": "Muay Thai",
         "Age": "31",
-        "Height": "68.00",
-        "Weight": "136.00",
-        "Octagon Debut": "Nov. 15, 2014",
-        "Reach": "70.50",
-        "Leg reach": "40.50"
+        "Height": "71.00",
+        "Weight": "162.20",
+        "Octagon Debut": "Feb. 4, 2012",
+        "Reach": "69.00",
+        "Leg reach": "42.00"
       },
       "Win Stats": {
-        "Wins by Knockout": "8",
-        "Wins by Submission": "8",
-        "First Round Finishes": "7"
+        "Wins by Knockout": "11",
+        "Wins by Submission": "2"
       },
       "Records": {
-        "Sig. Str. Landed": "4.37",
-        "Sig. Str. Absorbed": "5.16",
-        "Takedown avg": "0.58",
-        "Submission avg": "0.95",
-        "Sig. Str. Defense": "52%",
-        "Takedown Defense": "70%",
-        "Knockdown Avg": "0.63",
-        "Average fight time": "12:54",
-        "Sig. Strikes Landed": "1241",
-        "Sig. Strikes Attempted": "2455",
-        "Takedowns Landed": "",
-        "Takedowns Attempted": "28",
-        "Striking accuracy": "51%",
-        "Takedown Accuracy": "39%"
+        "Sig. Str. Landed": "7.17",
+        "Sig. Str. Absorbed": "4.75",
+        "Takedown avg": "0.27",
+        "Submission avg": "0.34",
+        "Sig. Str. Defense": "60%",
+        "Takedown Defense": "84%",
+        "Knockdown Avg": "0.34",
+        "Average fight time": "15:56",
+        "Sig. Strikes Landed": "3197",
+        "Sig. Strikes Attempted": "6714",
+        "Takedowns Landed": "4",
+        "Takedowns Attempted": "15",
+        "Striking accuracy": "48%",
+        "Takedown Accuracy": "53%"
       },
       "Win by Method": {
-        "Standing": "956 (77%)",
-        "Clinch": "134 (11%)",
-        "Ground": "151 (12%)"
+        "Standing": "2780 (87%)",
+        "Clinch": "245 (8%)",
+        "Ground": "172 (5%)"
       },
       "Last Fight": {
-        "Event": "Vera vs Munhoz",
-        "Date": "Aug. 19, 2023"
+        "Event": "Holloway vs Jung",
+        "Date": "Aug. 26, 2023"
       },
       "Fighter Facts": [
-        "Team Werdum on TUF LATAM",
-        "Pro since 2012",
-        "Eight wins by submission (heel hook, armbar, 3 RNC, 2 triangle, triangle armbar), eight by KO",
-        "Seven first round finishes",
-        "Has won 11of his last 14and five of his last six",
-        "Won his lone TUF LATAM fight by upkick"
+        "Pro since 2010",
+        "11 wins by KO, two by submission (2 guillotine), 12 by decision",
+        "Has won 18 of his last 22and fourof his last five",
+        "Was unbeaten at 145 pounds from 2014 to 2019 (14-0)",
+        "Owns March 2011 win over Strikeforce, IFL, WFA vet Harris Sarmiento, veteran of 53 fights at the time.",
+        "Origin of nickname  It just came because of the things I was able to accomplish in the time I did, so my coach at the time simply said, Youre blessed, man. The nickname just stuck."
       ],
       "UFC History": [
-        "UFC 292(8/19/23) Vera won a three round unanimous decision over Pedro Munhoz",
-        "UFC on ESPN(3/25/23) Vera lost a five round split decision to Cory Sandhagen",
-        "UFC on ESPN(8/13/22) Vera knocked out Dominick Cruz at 2:17 of the fourth round",
-        "UFC on ESPN(4/30/22) Vera won a five round unanimous decision over Rob Font",
-        "UFC 268(11/6/21) Vera knocked out Frankie Edgar at 3:50 of the third round",
-        "UFC on ESPN(6/19/21) Vera won a three round unanimous decision over Davey Grant",
-        "UFC Fight Night(12/19/20) Vera lost a three round unanimous decision to Jose Aldo",
-        "UFC 252(8/15/20) Vera stopped Sean OMalley via strikes at 4:40 of the first round",
-        "UFC on ESPN(5/16/20) Vera lost a three round unanimous decision to Song Yadong",
-        "UFC Fight Night(10/12/19) Vera stopped Andre Ewell via strikes at 3:17 of the third round",
-        "UFC 239(7/6/19) Vera submitted Nohelin Hernandez via rear naked choke at 3:25 of the second round",
-        "UFC Fight Night(3/23/19) Vera stopped Frankie Saenz via strikes at 1:25 of the first round",
-        "UFC Fight Night(11/17/18) Vera submitted Guido Cannetti via rear naked choke at 1:31 of the second round",
-        "UFC 227(8/4/18) Vera stopped Wuliji Buren via strikes at 4:53 of the second round",
-        "UFC Fight Night(2/3/18) Vera lost a three round unanimous decision to Douglas Silva de Andrade",
-        "UFC Fight Night(10/28/17) Vera lost a three round unanimous decision to John Lineker",
-        "UFC on FOX(7/22/17) Vera submitted Brian Kelleher via armbar at 2:18 of the first round",
-        "UFC Fight Night(3/18/17) Vera stopped Brad Pickett via strikes at 3:50 of the third round",
-        "UFC Fight Night(11/27/16) Vera won a three round unanimous decision over Ning Guangyou",
-        "UFC Fight Night(2/27/16) Vera lost a three round unanimous decision to Davey Grant",
-        "UFC Fight Night(8/8/15) Vera submitted Roman Salazar via triangle armbar at 2:15 of the second round",
-        "UFC 180(11/15/14) Vera lost a three round unanimous decision to Marco Beltran",
-        "",
-        "The Ultimate Fighter, LATAM",
-        "Vera was unable to continue in the competition due to a skin infection",
-        "On episode five (quarterfinals), Vera knocked out Henry Briones at 2:33 of the second round"
+        "UFC Fight Night(8/26/23) Holloway knocked out Chan Sung Jung at :23 of the third round",
+        "UFC on ESPN(4/15/23) Holloway won a five round unanimous decision over Arnold Allen",
+        "UFC 276(7/2/22) Holloway lost a five round unanimous decision to Alexander Volkanovski in a fight for the UFC featherweight title",
+        "UFC Fight Night(11/13/21) Holloway won a five round unanimous decision over Yair Rodriguez",
+        "UFC on ABC(1/16/21) Holloway won a five round unanimous decision over Calvin Kattar",
+        "UFC 251(7/12/20) Holloway lost a five round split decision to Alexander Volkanovski in a fight for the UFC featherweight title",
+        "UFC 245(12/14/19) Holloway lost a five round unanimous decision to Alexander Volkanovski, losing his UFC featherweight title",
+        "UFC 240(7/27/19) Holloway won a five round unanimous decision over Frankie Edgar to retain his UFC featherweight title",
+        "UFC 236(4/13/19) Holloway lost a five-round unanimous decision to Dustin Poirier in a fight for the interim UFC lightweight title",
+        "UFC 231(12/8/18) Holloway scored a TKO (doctor stoppage) over Brian Ortega at 5:00 of round four to retain his UFC featherweight title",
+        "UFC 218(12/2/17) Holloway stopped Jose Aldo via strikes at 4:51 of the third round to retain his UFC featherweight title",
+        "UFC 212(6/3/17) Holloway stopped Jose Aldo via strikes at 4:13 of the third round to win the undisputed UFC featherweight title",
+        "UFC 206(12/10/16) Holloway stopped Anthony Pettis via strikes at 4:50 of the third round to win the interim UFC featherweight title",
+        "UFC 199(6/4/16) Holloway won a three round unanimous decision over Ricardo Lamas",
+        "UFC 194(12/12/15) Holloway won a three round unanimous decision over Jeremy Stephens",
+        "UFC Fight Night(8/23/15) Holloway scored a TKO (injury) over Charles Oliveira at 1:39 of the first round",
+        "UFC on FOX(4/18/15) Holloway submitted Cub Swanson via guillotine choke at 3:58 of the third round",
+        "UFC Fight Night(2/14/15) Holloway won a three round unanimous decision over Cole Miller",
+        "UFC Fight Night(10/4/14) Holloway knocked out Akira Corassani at 3:11 of the first round",
+        "UFC Fight Night(8/23/14) Holloway stopped Clay Collard via strikes at 3:47 of the third round",
+        "UFC 172(4/26/14) Holloway submitted Andre Fili via guillotine choke at 3:39 of the third round",
+        "UFC Fight Night(1/4/14) Holloway stopped Will Chope via strikes at 2:27 of the second round",
+        "UFC Fight Night(8/17/13) Holloway lost a three round unanimous decision to Conor McGregor",
+        "UFC 160(5/25/13) Holloway lost a three round split decision to Dennis Bermudez",
+        "UFC 155(12/29/12) Holloway won a three round split decision over Leonard Garcia",
+        "UFC 150(8/11/12) Holloway stopped Justin Lawrence via strikes at 4:49 of the second round",
+        "TUF Live Finale(6/1/12) Holloway won a three round unanimous decision over Pat Schilling",
+        "UFC 143(2/4/12) Holloway was submitted by Dustin Poirier via mounted triangle armbar at 3:23 of the first round."
       ],
       "Additional Information": {
-        "When and why did you start training for fighting?": "When I was 16 years old. I fight because Ive loved fighting since I was a kid and I started with one goal: the UFC",
-        "What ranks and titles have you held?": "I'm a black belt in jiu-jitsu, 145-pound belt for FMP in Mexico",
-        "Do you have any heroes?": "My Dad and Georges St-Pierre",
-        "What does it mean for you to fight in the UFC?": "For me, the UFC is everything in my life. I chose only one option in life and it is the UFC, so when I started to fight and people asked what would happen if the UFC doesn't call me, I just say I'll be in the UFC one say. I love this.",
-        "Did you go to college and if so what degree did you earn?": "No college for me, only the UFC. Fight college (Laughs).",
-        "What was your job before you started fighting?": "Only fighting and helping my Dad in whatever he needs.",
-        "Favorite grappling technique:": "Triangle choke",
-        "Favorite Striking technique:": "Superman punch"
+        "When and why did you start training for fighting?": "I started training at the end of my sophomore year in high school in 2007. I started training because one of my best friends that I met in that grade - Josh Keanu - told me I should train with him. I slept over his house one night and his trainer was there too. The trainer watched me hitting the speed bag and said I should come to training. So I did and the rest is history.",
+        "What ranks and titles have you held?": "UFC featherweight champion, I held the 155 title for X-1 world events, its the biggest show on the island.",
+        "Do you have any heroes": "? Jesus Christ for leading the way for me, and my grandma Cynthia Kapoi. She was always there for me and my brothers and just gave us a lot of love.",
+        "What does it mean for you to fight in the UFC": "? It means a lot because I come from a little town on Oahu that is basically looked down upon. We are seen as the punks and troublemakers of the island. It just feels so good to make it when people are looking at you thinking there is no way I can. This also was a dream since I first started fighting. Im living my dream doing what I love to do. Its just hard to explain how I feel because I cant put it in words.",
+        "Did you go to college and if so what degree did you earn": "? No. Right after high school I knew I wanted to fight. People would ask me are you going to college and I would say no, Im gonna pursue my dream and fight. Most of them would give me a youre crazy face. But it just made me want it more.",
+        "What was your job before you started fighting?": "I worked with a man named Dorsey Roberts. He owns his own handyman business and thats what I was, a handyman.",
+        "Specific accomplishments in amateur competition?": "I won three amateur 145-pound belts within three months. In order, 808 Battleground, Destiny interim, Just Scrap.",
+        "Ranks in any martial arts styles:": "Purple belt in jiu-jitsu",
+        "Favorite grappling technique:": "Arm bar",
+        "Favorite Striking technique:": "flying knee"
       }
+    },
+    {
+      "Name": "Alex Pereira",
+      "Nickname": "Poatan",
+      "Division Title": "Light Heavyweight Division",
+      "Division Body": {
+        "Wins": "9",
+        "Losses": "2",
+        "Draws": "0"
+      },
+      "Fighter Bio": {
+        "Status": "Active",
+        "Hometown": "So Bernardo do Campo, Brazil",
+        "Trains at": "Teixeira MMA & Fitness-Bethel, CT",
+        "Fighting style": "Kickboxer",
+        "Age": "36",
+        "Height": "76.00",
+        "Weight": "204.00",
+        "Octagon Debut": "Nov. 6, 2021",
+        "Reach": "79.00",
+        "Leg reach": "44.00"
+      },
+      "Win Stats": {
+        "Wins by Knockout": "7",
+        "First Round Finishes": "3"
+      },
+      "Records": {
+        "Sig. Str. Landed": "5.00",
+        "Sig. Str. Absorbed": "3.65",
+        "Takedown avg": "0.19",
+        "Submission avg": "0.38",
+        "Sig. Str. Defense": "51%",
+        "Takedown Defense": "70%",
+        "Knockdown Avg": "0.57",
+        "Average fight time": "11:12",
+        "Sig. Strikes Landed": "392",
+        "Sig. Strikes Attempted": "632",
+        "Takedowns Landed": "",
+        "Takedowns Attempted": "1",
+        "Striking accuracy": "62%",
+        "Takedown Accuracy": "100%"
+      },
+      "Win by Method": {
+        "Standing": "323 (82%)",
+        "Clinch": "54 (14%)",
+        "Ground": "15 (4%)"
+      },
+      "Last Fight": {
+        "Event": "Prochazka vs Pereira",
+        "Date": "Nov. 11, 2023"
+      },
+      "Fighter Facts": [
+        "MMA pro since 2015",
+        "Sevenwins by KO",
+        "Three first-round finishes",
+        "Lost pro debut; 9-1 since",
+        "Has won nineof his last 10",
+        "Reported 33-7, 21 KOs pro kickboxing record",
+        "Holds kickboxing wins over Adesanya (twice) and Dustin Jacoby",
+        "Origin of nickname: It's an indigenous name."
+      ],
+      "UFC History": [
+        "UFC 295(11/11/23) Pereira stoppedJiř Prochzka via strikes at 4:08 of the second round to win the UFC light heavyweight title",
+        "UFC 291(7/29/23) Pereira won a three round split decision over Jan Bachowicz",
+        "UFC 287(4/8/23) Pereira was knocked out by Israel Adesanya at 4:21 of the second round, losing his UFC middleweight title",
+        "UFC 281(11/12/22) Pereira stopped Israel Adesanya via strikes at 2:01 of the fifth round to win the UFC middleweight title",
+        "UFC 276(7/2/22) Pereira knocked out Sean Strickland at 2:36 of the first round",
+        "UFC Fight Night(3/12/22) Pereira won a three round unanimous decision over Bruno Silva",
+        "UFC 268(11/6/21) Pereira stopped Andreas Michailidis via strikes at :18 of the second round"
+      ],
+      "Additional Information": {
+        "When and why did you start training for fighting?": "I started training in 2009 to have a better quality of life and mostly to get away from alcohol.",
+        "What ranks and titles have you held?": "I was Glory Kickboxing's simultaneous Middleweight and Light Heavyweight Champion. I defended my MW belt five times.",
+        "What does it mean for you to fight in the UFC?": "It's very important for me because thefinancial possibilitiesin the UFC are very high. I have a great chance to give my family a better life and take care of them.",
+        "What was your job before you started fighting?": "I worked as a tire repairman.",
+        "Specific accomplishments in amateur competition?": "25-3 Kickboxing record.",
+        "Ranks in any martial arts styles:": "Kickboxing black belt",
+        "Favorite grappling technique:": "Anaconda choke",
+        "Favorite Striking technique:": "Boxing combinations"
+      }
+    },
+    {
+      "Name": "Jamahal Hill",
+      "Nickname": "Sweet Dreams",
+      "Division Title": "Light Heavyweight Division",
+      "Division Body": {
+        "Wins": "12",
+        "Losses": "1",
+        "Draws": "0"
+      },
+      "Fighter Bio": {
+        "Status": "Active",
+        "Hometown": "Chicago, United States",
+        "Fighting style": "MMA",
+        "Age": "32",
+        "Height": "76.00",
+        "Weight": "204.50",
+        "Octagon Debut": "Jan. 25, 2020",
+        "Reach": "79.00",
+        "Leg reach": "43.50"
+      },
+      "Win Stats": {
+        "Fight Win Streak": "4",
+        "Wins by Knockout": "7",
+        "First Round Finishes": "4"
+      },
+      "Records": {
+        "Sig. Str. Landed": "7.31",
+        "Sig. Str. Absorbed": "3.35",
+        "Takedown avg": "0.00",
+        "Submission avg": "0.00",
+        "Sig. Str. Defense": "48%",
+        "Takedown Defense": "73%",
+        "Knockdown Avg": "0.72",
+        "Average fight time": "09:14",
+        "Sig. Strikes Landed": "608",
+        "Sig. Strikes Attempted": "1115",
+        "Takedowns Landed": "N/A",
+        "Takedowns Attempted": "N/A",
+        "Striking accuracy": "55%",
+        "Takedown Accuracy": "N/A"
+      },
+      "Win by Method": {
+        "Standing": "481 (79%)",
+        "Clinch": "71 (12%)",
+        "Ground": "56 (9%)"
+      },
+      "Last Fight": {
+        "Event": "Teixeira vs Hill",
+        "Date": "Jan. 21, 2023"
+      },
+      "Fighter Facts": [
+        "Pro since 2017",
+        "Seven wins by KO",
+        "Four first round finishes",
+        "On four-fight winning streak",
+        "Owns June 2018 win over UFC vet Dequan Townsend",
+        "Origin of nickname: A teammate suggested it before my first amateur fight and then I scored a 42-second KO, so it just stuck."
+      ],
+      "UFC History": [
+        "UFC 283(1/21/23) Hill won a five round unanimous decision over Glover Teixeira to win the UFC light heavyweight title",
+        "UFC on ESPN(8/6/22) Hill stopped Thiago Santos via strikes at 2:31 of the fourth round",
+        "UFC Fight Night(2/19/22) Hill knocked out Johnny Walker at 2:55 of the first round",
+        "UFC on ESPN(12/4/21) Hill knocked out Jimmy Crute at :48 of the first round",
+        "UFC 263(6/12/21) Hill was stopped by Paul Craig via strikes at 1:59 of the first round",
+        "UFC on ESPN(12/5/20) Hill stopped Ovince Saint Preux via strikes at 3:37 of the second round",
+        "UFC on ESPN(5/30/20) Hills win over Klidson Abreu was overturned to a no contest when he failed a post-fight drug test",
+        "UFC Fight Night(1/25/20) Hill won a three round unanimous decision over Darko Stosic",
+        "",
+        "Dana White's Contender Series, Seaoson 3",
+        "Episode five(7/23/19) Hill stopped Alexander Poppeck via strikes at 4:29 of the second round"
+      ],
+      "Additional Information": {
+        "When and why did you start training for fighting?": "January 3rd of 2010. I was supposed to go to college to play basketball but didn't know what I wanted to study and didn't want to be in debt, so I decided to take a year off, and then I saw Anderson Silva fight Forest Griffin and fell in love with the sport. Plus, I've always been into martial arts and I've been in a lot of fights, so I figured I might as well get paid for it.",
+        "What ranks and titles have you held?": "I held 2 amateur titles and 1 professional title",
+        "Do you have any heroes?": "My mom is my biggest hero, then Muhammad Ali, Anderson Silva and Lebron James I'm just a fan of greatness.",
+        "What does it mean for you to fight in the UFC?": "A dream come true. All the hard work, sacrifices, blood, sweat, and tears were worth it. And it would mean that I'm on the right path for what I want in life.",
+        "What was your job before you started fighting?": "A lot of different factory jobs where I wasnt happy. I'm happy when I'm in the gym and in the cage.",
+        "Specific accomplishments in amateur competition?": "I held two titles for two of the best shows in West Michigan and was unbeaten with 11 wins - all finishes.",
+        "Ranks in any martial arts styles:": "Blue belt in Gracie BJJ and a brown belt in Mmatrix striking system",
+        "Favorite grappling technique:": "Whatever is open",
+        "Favorite striking technique": ": Whatever is open"
+      }
+    },
+    {
+      "betting_Odds": [
+        {
+          "Fighter": "Sean O'Malley",
+          "Odds": "180"
+        },
+        {
+          "Fighter": "Merab Dvalishvili",
+          "Odds": "-210"
+        },
+        {
+          "Fighter": "Justin Gaethje",
+          "Odds": "-230"
+        },
+        {
+          "Fighter": "Max Holloway",
+          "Odds": "195"
+        },
+        {
+          "Fighter": "Alex Pereira",
+          "Odds": "-140"
+        },
+        {
+          "Fighter": "Jamahal Hill",
+          "Odds": "120"
+        }
+      ]
     }
   ]
 }

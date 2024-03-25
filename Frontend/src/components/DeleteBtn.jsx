@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const DeleteBtn = ({ id }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [success, setSuccess] = useState(false);
+  const navigate = useNavigate();
 
-  const handleClick = async () => {
+  const handleClick = async (e) => {
+    e.preventDefault();
+
     try {
       setIsLoading(true);
       const response = await fetch(`http://127.0.0.1:8000/delete/${id}`, {
@@ -14,7 +17,8 @@ const DeleteBtn = ({ id }) => {
       if (!response.ok) {
         throw new Error("Failed to delete message");
       }
-      setSuccess(true);
+
+      navigate("/chatlog");
     } catch (error) {
       setError(error.message);
     } finally {
@@ -24,11 +28,15 @@ const DeleteBtn = ({ id }) => {
 
   return (
     <div>
-      <button onClick={handleClick} disabled={isLoading}>
+      <button
+        type="submit"
+        className="select-none rounded-lg bg-red-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-red-500/20 transition-all hover:shadow-lg hover:shadow-red-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        onClick={handleClick}
+        disabled={isLoading}
+      >
         {isLoading ? "Deleting..." : "Delete Message"}
       </button>
       {error && <p>Error: {error}</p>}
-      {success && <p>Message deleted successfully!</p>}
     </div>
   );
 };

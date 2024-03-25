@@ -12,12 +12,10 @@ const ChatMessage = ({ message }) => {
             <span className="text-sm font-semibold text-gray-900 dark:text-white">
               {message.user === "gpt" ? "ChatGPT" : ""}
             </span>
-            {/* Name field left blank if user is not "gpt" */}
-            <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
-              {/* Empty space reserved for time */}
-            </span>
+
+            <span className="text-sm font-normal text-gray-500 dark:text-gray-400"></span>
           </div>
-          {/* Your message goes here */}
+
           <p className="text-sm font-normal py-2.5 text-gray-900 dark:text-white">
             {message.message}
           </p>

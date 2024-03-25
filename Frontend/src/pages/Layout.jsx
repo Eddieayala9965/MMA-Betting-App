@@ -8,6 +8,7 @@ const Layout = ({ className }) => {
     { title: "MMA ChatGPT", url: "/ai" },
     { title: "Login", url: "/login" },
     { title: "User", url: "/user" },
+    { title: "Odds", url: "/odds" },
   ];
   return (
     <>
