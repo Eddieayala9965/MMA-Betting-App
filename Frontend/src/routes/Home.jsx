@@ -10,7 +10,7 @@ const Home = () => {
               <div className="grid lg:grid-cols-2 justify-center items-center gap-10">
                 <div>
                   <h1 className="md:text-5xl text-4xl font-extrabold mb-6 md:!leading-[55px]">
-                    Welcome to MMAChatGPT - Your Ultimate MMA Prediction
+                    Welcome to The CageSage - Your Ultimate MMA Prediction
                     Companion!
                   </h1>
                   <p className="text-base leading-relaxed">
@@ -22,7 +22,7 @@ const Home = () => {
                   <div className="flex flex-wrap gap-y-4 gap-x-8 mt-8">
                     <Link to={"/ai"}>
                       <button className="bg-[#333] hover:bg-[#111] text-white flex items-center transition-all font-semibold rounded-md px-5 py-4">
-                        MMAChatGPT
+                        The CageSage
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className="w-[14px] fill-current ml-2"
@@ -200,12 +200,12 @@ const Home = () => {
             <div className="max-w-7xl w-full mx-auto grid md:grid-cols-2 justify-center items-center gap-10">
               <div>
                 <h2 className="md:text-4xl text-3xl font-extrabold mb-6">
-                  About MMAChatGPT
+                  About The Cage Sage
                 </h2>
                 <p>
-                  At MMAChatGPT, were passionate about revolutionizing the way
-                  you predict MMA fights. Our team of MMA enthusiasts and tech
-                  experts have come together to create an app that combines
+                  At The Cage Sage, were passionate about revolutionizing the
+                  way you predict MMA fights. Our team of MMA enthusiasts and
+                  tech experts have come together to create an app that combines
                   cutting-edge technology with unparalleled insights into the
                   world of MMA.
                 </p>
@@ -232,7 +232,7 @@ const Home = () => {
             <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
               © 2024{" "}
               <a href="https://flowbite.com/" className="hover:underline">
-                MMAChatGPT™
+                The CageSage™
               </a>
               . All Rights Reserved.
             </span>

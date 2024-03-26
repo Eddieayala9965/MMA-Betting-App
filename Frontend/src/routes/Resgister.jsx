@@ -40,7 +40,7 @@ const Register = () => {
           <div className="grid md:grid-cols-2 items-center gap-10 max-w-6xl w-full">
             <div className="max-md:text-center">
               <h2 className="lg:text-5xl text-4xl font-extrabold lg:leading-[55px]">
-                Welcome to MMAChatGPT!
+                Welcome to The CageSage!
               </h2>
               <p className="text-sm mt-6">
                 Get ready to immerse yourself in thrilling discussions,

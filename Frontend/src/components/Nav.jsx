@@ -11,7 +11,7 @@ const Nav = ({ navItems, logOut }) => {
       <div className="flex w-full items-center">
         <div className="flex align-center">
           <img className="h-16 w-16" src="../img/robot3.png" alt="robo" />
-          <span> MMAChatGPT</span>
+          <span>The CageSage</span>
         </div>
         <ul
           className={`flex flex-col md:flex-row items-center space-y-4 md:space-y-0 px-4 mx-auto font-semibold font-heading ${
