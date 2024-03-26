@@ -27,7 +27,7 @@ const UpdateProfileForm = () => {
     e.preventDefault();
 
     const user_id = localStorage.getItem("user_id");
-    const requestOptions = {
+    const options = {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -39,7 +39,7 @@ const UpdateProfileForm = () => {
     try {
       const response = await fetch(
         `http://127.0.0.1:8000/update/profile/${user_id}`,
-        requestOptions
+        options
       );
       if (!response.ok) {
         throw new Error("Failed to update profile");
