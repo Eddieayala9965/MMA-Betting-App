@@ -1,7 +1,7 @@
-# MMA Prediction App
+# The CageSage
 
 ## Overview
-The MMA Prediction App is an innovative solution designed for MMA enthusiasts and bettors alike, offering detailed fight predictions, fighter statistics, and betting odds. This app aims to enhance the betting experience by providing users with data-driven insights and analyses.
+The CageSage is an innovative solution designed for MMA enthusiasts and bettors alike, offering detailed fight predictions, fighter statistics, and betting odds. This app aims to enhance the betting experience by providing users with data-driven insights and analyses.
 
 ## Features
 - **Predictive Analytics**: Utilizes machine learning algorithms to predict fight outcomes based on historical data.
@@ -16,5 +16,5 @@ The MMA Prediction App is an innovative solution designed for MMA enthusiasts an
 
 ## How It Works
 
-The MMA Prediction App leverages the power of advanced data analytics and machine learning to deliver personalized fight predictions and betting guidance, setting a new standard in the sports betting industry. At the heart of our app is MMAChatGPT, a sophisticated AI model.
+The SageCage leverages the power of advanced data analytics and machine learning to deliver personalized fight predictions and betting guidance, setting a new standard in the sports betting industry. At the heart of our app is ChatGPT, a sophisticated AI model.
 
