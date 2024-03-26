@@ -16,5 +16,5 @@ The CageSage is an innovative solution designed for MMA enthusiasts and bettors 
 
 ## How It Works
 
-The SageCage leverages the power of advanced data analytics and machine learning to deliver personalized fight predictions and betting guidance, setting a new standard in the sports betting industry. At the heart of our app is ChatGPT, a sophisticated AI model.
+The CageSage leverages the power of advanced data analytics and machine learning to deliver personalized fight predictions and betting guidance, setting a new standard in the sports betting industry. At the heart of our app is ChatGPT, a sophisticated AI model.
 
