@@ -38,6 +38,7 @@ const AIResponse = () => {
   const clearChat = () => {
     setChatLog([]);
   };
+
   return (
     <div className="flex flex-col md:flex-row max-w-full ml-0 mr-0 pl-0 pr-0 text-black text-center bg-color-dark-grey h-screen">
       <aside className="md:w-1/4 bg-color-greyblack">
@@ -47,7 +48,7 @@ const AIResponse = () => {
             New Chat
           </div>
         </button>
-        <button>
+        <button className="">
           <Link to={"/chatlog"}>
             <div className=" p-4 border rounded-md hover:bg-opacity-50 transition duration-300 ease-in-out hover:bg-white border-black text-left ">
               <span className="pl-2 pr-2 ">&#43;</span>
@@ -57,7 +58,7 @@ const AIResponse = () => {
         </button>
       </aside>
       <section className="flex-1 relative">
-        <div className="chat-log p-4 h-screen text-left overflow-auto">
+        <div className="chat-log p-4 h-screen text-left overflow-auto scroll-smooth">
           {chatlog.map((message, index) => {
             return <ChatMessage key={index} message={message} />;
           })}

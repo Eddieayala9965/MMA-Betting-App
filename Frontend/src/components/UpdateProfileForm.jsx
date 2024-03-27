@@ -12,7 +12,6 @@ const UpdateProfileForm = () => {
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
-
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
