@@ -200,7 +200,7 @@ const Home = () => {
             <div className="max-w-7xl w-full mx-auto grid md:grid-cols-2 justify-center items-center gap-10">
               <div>
                 <h2 className="md:text-4xl text-3xl font-extrabold mb-6">
-                  About The Cage Sage
+                  About The CageSage
                 </h2>
                 <p>
                   At The Cage Sage, were passionate about revolutionizing the

@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 const Layout = ({ className }) => {
   const primaryNav = [
     { title: "Home", url: "/" },
-    { title: "MMA ChatGPT", url: "/ai" },
+    { title: "The CageSage", url: "/ai" },
     { title: "Login", url: "/login" },
     { title: "User", url: "/user" },
     { title: "Odds", url: "/odds" },
