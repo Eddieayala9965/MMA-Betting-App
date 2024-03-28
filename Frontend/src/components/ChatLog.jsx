@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import DeleteBtn from "./DeleteBtn";
 
 export const loader = async () => {
-  const url = `http://127.0.0.1:8000/data`;
+  const url = `${import.meta.env.VITE_FASTAPI_URL}/data`;
   const options = {
     method: "GET",
     headers: {
