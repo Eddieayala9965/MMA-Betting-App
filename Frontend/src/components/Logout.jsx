@@ -8,7 +8,7 @@ const Logout = () => {
   const handleLogout = async () => {
     setIsLoading(true);
     try {
-      const url = "http://localhost:8000/logout/";
+      const url = `${import.meta.env.VITE_FASTAPI_URL}/logout/`;
       const access_token = localStorage.getItem("access_token");
 
       const response = await fetch(url, {
