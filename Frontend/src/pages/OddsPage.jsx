@@ -1,22 +1,27 @@
-import { useLoaderData } from "react-router-dom";
+// import { useLoaderData } from "react-router-dom";
 import { useState } from "react";
+import oddsData from "../../data/odds.json";
 
-export const loader = async () => {
-  const url = "http://localhost:4001/odds";
-  const options = {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  };
-  const response = await fetch(url, options);
-  const data = await response.json();
-  console.log(data);
-  return { data };
-};
+// export const loader = async () => {
+// const url = "http://localhost:4001/odds";
+// const options = {
+//   method: "GET",
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+// };
+// const response = await fetch(url, options);
+// const data = await response.json();
+// console.log(data);
+// return { data };
+// };
 
 const OddsPage = () => {
-  const { data } = useLoaderData();
+  // const { data } = useLoaderData();
+  // console.log(data);
+  console.log(oddsData);
+  const { odds } = oddsData;
+  const data = odds;
   console.log(data);
   const [searchTerm, setSearchTerm] = useState("");
 

@@ -7,7 +7,7 @@ import Register, { action as registerAction } from "./routes/Resgister";
 import Login, { action as loginAction } from "./routes/Login";
 import UserPage, { loader as userLoader } from "./routes/UserPage";
 import ChatLog, { loader as dataLoader } from "./components/ChatLog";
-import OddsPage, { loader as oddsLoader } from "./pages/OddsPage";
+import OddsPage from "./pages/OddsPage";
 
 import "./App.css";
 import "./normal.css";
@@ -48,7 +48,7 @@ const router = createBrowserRouter([
       {
         path: "/odds",
         element: <OddsPage />,
-        loader: oddsLoader,
+        // loader: oddsLoader,
       },
     ],
   },

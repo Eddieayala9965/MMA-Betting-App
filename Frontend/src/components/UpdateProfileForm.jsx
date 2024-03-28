@@ -37,7 +37,7 @@ const UpdateProfileForm = () => {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/update/profile/${user_id}`,
+        `${import.meta.env.VITE_FASTAPI_URL}/update/profile/${user_id}`,
         options
       );
       if (!response.ok) {

@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import UpdateProfileForm from "../components/UpdateProfileForm";
 
 export const loader = async () => {
-  const url = "http://127.0.0.1:8000/user";
+  const url = `${import.meta.env.VITE_FASTAPI_URL}/user`;
   const options = {
     method: "GET",
     headers: {
