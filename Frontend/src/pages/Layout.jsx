@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Nav from "../components/Nav";
+import { useState, useEffect } from "react";
 
 const Layout = ({ className }) => {
   const isLoggin = localStorage.getItem("access_token");

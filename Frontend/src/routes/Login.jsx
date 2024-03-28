@@ -6,7 +6,7 @@ export const action = async ({ request }) => {
   const email = formData.get("email");
   const password = formData.get("password");
   const data = { email, password };
-  const url = `${import.meta.env.VITE_FASTAPI_URL}/login`;
+  const url = `https://main-bvxea6i-rz5mr36ul6eqa.us.platformsh.site/login`;
 
   const userLogin = async (data) => {
     const options = {
