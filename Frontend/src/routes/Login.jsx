@@ -1,6 +1,7 @@
-import { Form, Link, redirect } from "react-router-dom";
+import { Form, Link, redirect, useNavigate } from "react-router-dom";
 
 export const action = async ({ request }) => {
+  const navigate = useNavigate();
   const formData = await request.formData();
   const email = formData.get("email");
   const password = formData.get("password");

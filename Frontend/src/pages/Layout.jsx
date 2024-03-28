@@ -1,14 +1,23 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import Nav from "../components/Nav";
 
 const Layout = ({ className }) => {
+  const isLoggin = localStorage.getItem("access_token");
+  const navigate = useNavigate();
+
   const primaryNav = [
     { title: "Home", url: "/" },
     { title: "The CageSage", url: "/ai" },
-    { title: "Login", url: "/login" },
-    { title: "User", url: "/user" },
     { title: "Odds", url: "/odds" },
   ];
+
+  if (!isLoggin) {
+    primaryNav.push({ title: "Login", url: "/login" });
+  }
+  if (isLoggin) {
+    primaryNav.push({ title: "User", url: "/user" });
+  }
+
   return (
     <>
       <div className={`flex flex-col min-h-screen${className}`}>
