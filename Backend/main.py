@@ -36,6 +36,7 @@ from langchain_core.prompts import MessagesPlaceholder
 from langchain_core.messages import HumanMessage, AIMessage
 
 
+
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 
 
@@ -51,7 +52,8 @@ app.add_middleware(
 
 origins = [
     "http://localhost", 
-    "http://localhost:5173", 
+    "http://localhost:5173",
+    "https://the-cage-sage.netlify.app/" 
 ]
 
 supabase = create_supabase_client()
@@ -72,17 +74,26 @@ async def get_fighter_data(url):
             raise HTTPException(status_code=response.status_code, detail="Failed to fetch data")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+    
+
+def process_data(data):
+        fighter_data = data
+        return fighter_data
+    
+
 
 @app.post("/generate")
 async def generate_response(message: str = Body(...)):
     try:
-        fighter_data = await get_fighter_data("http://localhost:4002/fighters")
+        with open('small-data.json', 'r') as file:
+            data = json.load(file)
+            fighter_data  = process_data(data)
         response = client.chat.completions.create(
             model="gpt-3.5-turbo", 
             messages=[
                 {
                     "role": "system",
-                    "content": f'you will answer questions about {fighter_data}, when asked about fighter data. you will provide the correct answer. When asked about fight predictions you have to proivde a prediction for the fight based on the data you have on fighter data ,you have to give a predictioin based on the data you have and what betting odds they give you.If the user does not provide any odds data than answer regardless, Also Max Holloway and Justin Gaethje are fighting April 13th. When given a prediction you need to give an answer to who will win and how they will win, Dont say However, its important to note that MMA fights can be unpredictable and the outcome can be influenced by various factors such as the fighters current form, strategy, and even luck. You Must pick a winner, Also dont say based on data, just say who the winner will be, you know its the data, but you dont have to say `based on the data` give details about the fighter and then the winner.Also only answer Questions about MMA and UFC fights, anything outside of that tell the user you are not designed to answer that question. Give information about fighters when asked, so provide stats, ufc history, last fight, fighter bio, wins and loses. alex pereiras last fight was Prochazka vs Pereira. make the responses short '
+                    "content": f'you will answer questions about {fighter_data}, when asked about fighter data. you will provide the correct answer. When asked about fight predictions you have to proivde a prediction for the fight based on the data you have on fighter data ,you have to give a predictioin based on the data you have and what betting odds they give you.If the user does not provide any odds data than answer regardless, Also Max Holloway and Justin Gaethje are fighting April 13th. When given a prediction you need to give an answer to who will win and how they will win, Dont say However, its important to note that MMA fights can be unpredictable and the outcome can be influenced by various factors such as the fighters current form, strategy, and even luck. You Must pick a winner, Also dont say based on data, just say who the winner will be, you know its the data, but you dont have to say `based on the data` give details about the fighter and then the winner.Also only answer Questions about MMA and UFC fights, anything outside of that tell the user you are not designed to answer that question. Give information about fighters when asked, so provide stats, ufc history, last fight, fighter bio, wins and loses. alex pereiras last fight was Prochazka vs Pereira.'
                 }, 
                 {
                     "role": "user",
