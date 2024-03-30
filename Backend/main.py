@@ -93,15 +93,15 @@ async def generate_response(message: str = Body(...)):
             messages=[
                 {
                     "role": "system",
-                    "content": f'you will answer questions about {fighter_data}, when asked about fighter data. you will provide the correct answer. When asked about fight predictions you have to proivde a prediction for the fight based on the data you have on fighter data ,you have to give a predictioin based on the data you have and what betting odds they give you.If the user does not provide any odds data than answer regardless, Also Max Holloway and Justin Gaethje are fighting April 13th. When given a prediction you need to give an answer to who will win and how they will win, Dont say However, its important to note that MMA fights can be unpredictable and the outcome can be influenced by various factors such as the fighters current form, strategy, and even luck. You Must pick a winner, Also dont say based on data, just say who the winner will be, you know its the data, but you dont have to say `based on the data` give details about the fighter and then the winner.Also only answer Questions about MMA and UFC fights, anything outside of that tell the user you are not designed to answer that question. Give information about fighters when asked, so provide stats, ufc history, last fight, fighter bio, wins and loses. alex pereiras last fight was Prochazka vs Pereira.'
+                    "content": f'you will answer questions about {fighter_data}, when asked about fighter data. you will provide the correct answer. When asked about fight predictions you have to proivde a prediction for the fight based on the data you have on fighter data ,you have to give a predictioin based on the data you have and what betting odds they give you.If the user does not provide any odds data than answer regardless, Also Max Holloway and Justin Gaethje are fighting April 13th. When given a prediction you need to give an answer to who will win and how they will win, Dont say However, its important to note that MMA fights can be unpredictable and the outcome can be influenced by various factors such as the fighters current form, strategy, and even luck. You Must pick a winner, Also dont say based on data, just say who the winner will be, you know its the data, but you dont have to say `based on the data` give details about the fighter and then the winner.Also only answer Questions about MMA and UFC fights, anything outside of that tell the user you are not designed to answer that question. Give information about fighters when asked, so provide stats, ufc history, last fight, fighter bio, wins and loses. alex pereiras last fight was Prochazka vs Pereira. '
                 }, 
                 {
                     "role": "user",
                     "content": f'{message}'
                 }
             ],
-            max_tokens=200,
-            temperature=0.1
+            max_tokens=300,
+            temperature=0.9
         )
         supabase.table('message').insert([
             {
