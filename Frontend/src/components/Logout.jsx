@@ -1,18 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Logout = () => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
-  // Determine if user is logged in based on the presence of an access token
   const isLoggedIn = !!localStorage.getItem("access_token");
-
-  // Redirect to login page immediately if not logged in
-  useEffect(() => {
-    if (!isLoggedIn) {
-      navigate("/login");
-    }
-  }, [isLoggedIn, navigate]);
 
   const handleLogout = async () => {
     setIsLoading(true);

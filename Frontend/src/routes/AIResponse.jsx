@@ -42,15 +42,18 @@ const AIResponse = () => {
   return (
     <div className="flex flex-col md:flex-row max-w-full ml-0 mr-0 pl-0 pr-0 text-black text-center bg-color-dark-grey h-screen">
       <aside className="md:w-1/4 bg-color-greyblack">
-        <button onClick={clearChat}>
-          <div className=" p-4 border rounded-md hover:bg-opacity-50 transition duration-300 ease-in-out hover:bg-white border-black text-left ">
+        <button
+          className="text-black font-bold py-2 px-4 rounded transform transition duration-500 hover:scale-110"
+          onClick={clearChat}
+        >
+          <div className=" p-4 border rounded-md hover:bg-opacity-50 transition duration-300 ease-in-out  border-black text-left ">
             <span className="pl-2 pr-2 ">&#43;</span>
             New Chat
           </div>
         </button>
-        <button className="">
+        <button className=" text-black font-bold py-2 px-4 rounded transform transition duration-500 hover:scale-110">
           <Link to={"/chatlog"}>
-            <div className=" p-4 border rounded-md hover:bg-opacity-50 transition duration-300 ease-in-out hover:bg-white border-black text-left ">
+            <div className=" p-4 border rounded-md hover:bg-opacity-50 transition duration-300 ease-in-out  border-black text-left ">
               <span className="pl-2 pr-2 ">&#43;</span>
               ChatLog
             </div>

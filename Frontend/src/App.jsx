@@ -48,7 +48,6 @@ const router = createBrowserRouter([
       {
         path: "/odds",
         element: <OddsPage />,
-        // loader: oddsLoader,
       },
     ],
   },

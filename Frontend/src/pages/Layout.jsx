@@ -7,26 +7,25 @@ const Layout = ({ className }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // If not logged in, redirect to login page
-    if (!isLoggedIn) {
-      navigate("/login");
-    } else if (window.location.pathname === "/login") {
-      navigate("/user");
+    if (!isLoggedIn && window.location.pathname !== "/login") {
+      navigate("/");
     }
   }, [isLoggedIn, navigate]);
 
   const primaryNav = [
     { title: "Home", url: "/" },
-    { title: "The CageSage", url: "/ai" },
-    { title: "Odds", url: "/odds" },
     ...(isLoggedIn
-      ? [{ title: "User", url: "/user" }]
+      ? [
+          { title: "Odds", url: "/odds" },
+          { title: "The CageSage", url: "/ai" },
+          { title: "User", url: "/user" },
+        ]
       : [{ title: "Login", url: "/login" }]),
   ];
 
   return (
     <>
-      <div className={`flex flex-col min-h-screen${className}`}>
+      <div className={`flex flex-col min-h-screen$`}>
         <div className="flex justify-center text-center items-center gap-14">
           <Nav navItems={primaryNav}></Nav>
         </div>
@@ -36,4 +35,5 @@ const Layout = ({ className }) => {
     </>
   );
 };
+
 export default Layout;

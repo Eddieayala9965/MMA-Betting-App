@@ -12,6 +12,9 @@ export const loader = async () => {
   };
   const response = await fetch(url, options);
   const user = await response.json();
+  localStorage.setItem("name", user.data[0].name);
+  const userName = localStorage.getItem("name");
+  console.log(userName);
   console.log(user.data);
   return { user: user.data };
 };
