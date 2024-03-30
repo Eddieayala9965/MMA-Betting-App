@@ -1,12 +1,11 @@
-import { Form, Link, redirect, useNavigate } from "react-router-dom";
+import { Form, Link, redirect } from "react-router-dom";
 
 export const action = async ({ request }) => {
-  const navigate = useNavigate();
   const formData = await request.formData();
   const email = formData.get("email");
   const password = formData.get("password");
   const data = { email, password };
-  const url = `https://main-bvxea6i-rz5mr36ul6eqa.us.platformsh.site/login`;
+  const url = `${import.meta.env.VITE_FASTAPI_URL}/login`;
 
   const userLogin = async (data) => {
     const options = {

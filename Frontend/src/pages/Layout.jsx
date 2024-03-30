@@ -1,22 +1,28 @@
-import { Outlet } from "react-router-dom";
+import { useEffect } from "react";
+import { useNavigate, Outlet } from "react-router-dom";
 import Nav from "../components/Nav";
-import { useState, useEffect } from "react";
 
 const Layout = ({ className }) => {
-  const isLoggin = localStorage.getItem("access_token");
+  const isLoggedIn = !!localStorage.getItem("access_token");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // If not logged in, redirect to login page
+    if (!isLoggedIn) {
+      navigate("/login");
+    } else if (window.location.pathname === "/login") {
+      navigate("/user");
+    }
+  }, [isLoggedIn, navigate]);
 
   const primaryNav = [
     { title: "Home", url: "/" },
     { title: "The CageSage", url: "/ai" },
     { title: "Odds", url: "/odds" },
+    ...(isLoggedIn
+      ? [{ title: "User", url: "/user" }]
+      : [{ title: "Login", url: "/login" }]),
   ];
-
-  if (!isLoggin) {
-    primaryNav.push({ title: "Login", url: "/login" });
-  }
-  if (isLoggin) {
-    primaryNav.push({ title: "User", url: "/user" });
-  }
 
   return (
     <>
