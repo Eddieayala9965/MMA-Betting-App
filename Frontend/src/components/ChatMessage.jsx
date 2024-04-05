@@ -4,7 +4,7 @@ const ChatMessage = ({ message }) => {
   const userName = localStorage.getItem("name");
 
   return (
-    <div className={`p-4 ${message.user === "gpt" ? "chatgpt" : ""}`}>
+    <div className="p-4">
       <div className="flex ml-10">
         <img
           className="w-8 h-8 rounded-full"
